@@ -247,12 +247,19 @@ scrim.onclick=closeSheet;document.getElementById("shClose").onclick=closeSheet;
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&sheet.classList.contains("open"))closeSheet();});
 
 /* ===== Saisie d'un jour ===== */
+function trajetMin(){
+  if(!cur||!cur.trajet)return 0;
+  const tm=t=>{if(!t)return null;const q=(""+t).split(":");return q.length>=2?(+q[0]*60+ +q[1]):null;};
+  const sp=(a,b)=>{const x=tm(a),y=tm(b);return(x!=null&&y!=null&&y>x)?(y-x):0;};
+  return sp(cur.tAD,cur.tAF)+sp(cur.tRD,cur.tRF); /* aller + retour = heures de trajet */
+}
 function calcHeures(){
   const deb=cur.debut,fin=cur.fin;
   if(deb&&fin){
     const [a,b]=deb.split(":").map(Number),[c,d]=fin.split(":").map(Number);
     let mins=(c*60+d)-(a*60+b)-Math.max(0,+cur.pause||0);
     if(mins<0)mins=0;
+    mins+=trajetMin(); /* les heures de trajet comptent comme heures travaillées */
     const tot=Math.round(mins/6)/10;
     cur.total=tot;
     cur.hNorm=Math.min(tot,PARAMS.horaire);
@@ -332,10 +339,11 @@ function wireDay(){
   g("i_hn").oninput=()=>{cur.hNorm=g("i_hn").value===""?null:+g("i_hn").value;updTot();};
   g("i_hs").oninput=()=>{cur.hSupp=g("i_hs").value===""?null:+g("i_hs").value;updTot();};
   g("i_site").onchange=()=>cur.site=g("i_site").value;
-  const tj=(id,k)=>{const e=g(id);if(e)e.onchange=()=>cur[k]=e.value;};
+  const syncH=()=>{calcHeures();if(g("i_hn"))g("i_hn").value=cur.hNorm!=null?cur.hNorm:"";if(g("i_hs"))g("i_hs").value=cur.hSupp!=null?cur.hSupp:"";if(g("i_tot"))g("i_tot").value=cur.total!=null?cur.total+" h":"";};
+  const tj=(id,k)=>{const e=g(id);if(e)e.onchange=()=>{cur[k]=e.value;syncH();};};
   tj("i_tad","tAD");tj("i_taf","tAF");tj("i_trd","tRD");tj("i_trf","tRF");
   {const cb=g("i_traj");if(cb)cb.onchange=()=>{cur.trajet=cb.checked;const z=g("trajZone");if(z)z.style.display=cb.checked?"":"none";
-    if(cb.checked){[["i_tad","tAD","07:30"],["i_taf","tAF","08:00"],["i_trd","tRD","16:30"],["i_trf","tRF","17:00"]].forEach(a=>{if(!cur[a[1]])cur[a[1]]=a[2];const e=g(a[0]);if(e&&!e.value)e.value=cur[a[1]];});}};}
+    if(cb.checked){[["i_tad","tAD","07:30"],["i_taf","tAF","08:00"],["i_trd","tRD","16:30"],["i_trf","tRF","17:00"]].forEach(a=>{if(!cur[a[1]])cur[a[1]]=a[2];const e=g(a[0]);if(e&&!e.value)e.value=cur[a[1]];});}syncH();};}
   {const e=g("i_dose");if(e)e.oninput=()=>cur.dose=e.value===""?null:+e.value;}
   g("chipsC").querySelectorAll(".chip").forEach(b=>b.onclick=()=>{cur.contrat=b.dataset.c;
     g("chipsC").querySelectorAll(".chip").forEach(x=>x.classList.remove("on"));b.classList.add("on");
