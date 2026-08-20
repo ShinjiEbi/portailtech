@@ -1,123 +1,114 @@
-# Portail-tech V2
+# Portail-tech
 
-Suite d'outils radioprotection terrain, **offline-first**, partage entre techniciens.
+Suite d'outils radioprotection terrain, **offline-first**, partagée entre techniciens.
 Stack : **Vite + React + TypeScript + Supabase + PWA**, IndexedDB local (Dexie) comme
-source de vrit de l'interface, Supabase comme base commune synchronise.
+source de vérité de l'interface, Supabase comme base commune synchronisée.
 
-## Les 3 modules
+## Organisation du dépôt
 
-- **ECME / talons** : base commune des talons (sources, dbitmtres, etc.).
-  Lecture pour tous, criture rserve aux **rfrents**. Pour les sources, l'activit
-  du jour est calcule automatiquement par dcroissance (A = A0e^(-ln2t/T)).
-- **Imputations** : les heures de chaque technicien (donnes **perso**, isoles par RLS).
-- **Journal** : main courante **partage** par l'quipe (chacun supprime ses propres entres).
+Ce dépôt contient **à la fois le code source et le site compilé** (déployé tel quel
+sur GitHub Pages, qui sert la racine du dépôt).
 
----
+```
+portailtech/
+├── app/                     ← CODE SOURCE (projet Vite complet, à modifier ici)
+│   ├── index.html           ← gabarit (entrée Vite)
+│   ├── src/                 ← modules React + lib (Dexie, sync, …)
+│   ├── public/              ← icônes, templates Excel, planning-legacy.html
+│   ├── supabase/schema.sql  ← schéma + RLS Postgres
+│   ├── package.json, vite.config.ts, tsconfig.json
+│   └── .env.example
+│
+├── index.html, assets/, sw.js, workbox-*.js, manifest.webmanifest, …
+│                            ← SITE COMPILÉ (sortie du build, servi par GitHub Pages)
+├── supabase/schema.sql      ← copie de référence du schéma (à exécuter dans Supabase)
+└── planning.html            ← ancien prototype autonome (indépendant de l'appli)
+```
 
-## 1. Prrequis
+> ⚠️ **On modifie le code dans `app/`**, jamais les fichiers compilés à la racine
+> (`assets/`, `index.html`, `sw.js`, …) qui sont régénérés par le build.
 
-- Node.js 18+ et npm
-- Un projet Supabase (gratuit) : https://supabase.com
-
-## 2. Crer le backend Supabase
-
-1. Cre un projet sur Supabase.
-2. Ouvre **SQL Editor**, colle le contenu de `supabase/schema.sql`, excute.
-   a cre les tables, les index, les triggers et les **RLS**.
-3. **Authentication > Providers** : laisse "Email" activ. Pour des comptes crs  la
-   main sans email de confirmation, dsactive "Confirm email" dans les rglages Auth.
-
-## 3. Crer les comptes techniciens
-
-- **Authentication > Users > Add user** : un compte par technicien (email + mot de passe).
-- Un profil est cr automatiquement (rle `tech` par dfaut).
-- Pour donner les droits d'criture sur les talons  un rfrent :
-  ```sql
-  update public.profiles set role = 'referent' where id = '<uuid-du-user>';
-  ```
-  (l'uuid se trouve dans Authentication > Users)
-
-## 4. Configurer le front
+## Développer / construire
 
 ```bash
-cp .env.example .env
-```
-Renseigne dans `.env` (valeurs dans **Project Settings > API**) :
-```
-VITE_SUPABASE_URL=https://xxxx.supabase.co
-VITE_SUPABASE_ANON_KEY=eyJ...
-```
-La cl **anon** est publique par design : la scurit passe entirement par les RLS.
-Ne jamais mettre la cl `service_role` dans le front.
-
-## 5. Lancer en dev
-
-```bash
+cd app
+cp .env.example .env      # renseigne VITE_SUPABASE_URL / VITE_SUPABASE_ANON_KEY
 npm install
-npm run dev
+npm run dev               # développement local
 ```
 
-## 6. Build de production
+Build de production (base GitHub Pages `/portailtech/`) :
 
 ```bash
-npm run build      # tsc --noEmit + vite build  ->  dist/
-npm run preview    # pour tester le build localement
+cd app
+VITE_BASE=/portailtech/ npm run build   # -> app/dist/
 ```
 
-### Dploiement
+## Déployer
 
-- **Recommand (Cloudflare Pages / Netlify / Vercel)** : pointer sur le repo,
-  build `npm run build`, dossier `dist/`, et dclarer les variables
-  `VITE_SUPABASE_URL` / `VITE_SUPABASE_ANON_KEY`. La base reste `/`.
-- **GitHub Pages** (dpt "projet", ex. `/Portail-tech/`) :
-  ```bash
-  VITE_BASE=/Portail-tech/ npm run build
-  cp dist/index.html dist/404.html   # routage SPA
-  ```
-  puis publier `dist/`.
+GitHub Pages sert la **racine** du dépôt. Pour publier une nouvelle version, on copie
+la sortie du build (`app/dist/`) à la racine :
 
-## 7. Installer en PWA sur mobile
+```bash
+cd app && VITE_BASE=/portailtech/ npm run build
+cp -r dist/* ..            # écrase index.html, assets/, sw.js, … à la racine
+```
 
-Ouvrir l'URL dans le navigateur > menu > **Ajouter  l'cran d'accueil**.
-L'appli se lance plein cran et fonctionne **hors-ligne** une fois les talons
-tlchargs (utile en zone contrle, sans rseau).
+(`app/dist/index.html` sert aussi de `404.html` pour le routage SPA.)
+
+## Backend Supabase
+
+1. Créer un projet Supabase (gratuit).
+2. **SQL Editor** : coller le contenu de `supabase/schema.sql` et exécuter. Le script est
+   **idempotent** (relançable) : il crée/ajuste les tables, index, triggers et **RLS**.
+   À relancer après toute évolution du schéma (nouvelles tables/colonnes).
+3. **Authentication > Users** : créer un compte par technicien.
+
+La clé **anon** est publique par design : toute la sécurité passe par les **RLS**.
+Ne jamais mettre la clé `service_role` dans le front.
 
 ---
 
-## Comment a marche (offline-first)
+## Module RTR — Régimes de travail radiologique
 
-- L'UI lit et crit **uniquement dans IndexedDB** (Dexie) : instantan, hors-ligne.
-- `src/lib/sync.ts` rconcilie avec Supabase ds qu'il y a du rseau + une session :
-  - **push** des lignes marques `_dirty` (cres/modifies hors-ligne) ;
-  - **pull** incrmental par curseur `updated_at` (pagination 500).
-- Suppression = **soft-delete** (`deleted = true`) pour ne jamais rater une suppression
-  faite hors-ligne. Conflits : dernier qui crit gagne (LWW sur `updated_at`).
-- La barre en haut indique l'tat rseau, la dernire synchro et le nombre de
+Bibliothèque des **régimes de travail radiologique**. Chaque régime porte :
+
+- un **nom** ;
+- un **site** (liste CNPE / DP2D) ;
+- une **date de validité** *optionnelle* (vide = pas d'échéance ; une date dépassée est
+  signalée « Périmé ») ;
+- un **code** correspondant au **code-barres** présenté au lecteur pour entrer en
+  **zone contrôlée**. Le code est affiché à l'écran sous forme de code-barres scannable
+  (**Code 128 B**, généré côté client, sans dépendance externe).
+
+Chaque régime est **perso** (visible du seul créateur, isolé par RLS) ou **partagé**
+(visible et modifiable par toute l'équipe) — même mécanique que les modules Calcul et
+Intervention.
+
+On accède à la bibliothèque via le bouton **☢** dans l'en-tête, **à gauche du bouton de
+synchronisation**.
+
+### Fichiers concernés
+
+- `app/src/lib/types.ts` — type `RegimeTravail` / `RtrScope`.
+- `app/src/lib/db.ts` — table Dexie `rtr` (version 11).
+- `app/src/lib/rtr.ts` — CRUD local + synchro.
+- `app/src/lib/barcode.ts` — encodeur Code 128 B (SVG).
+- `app/src/modules/rtr/RtrView.tsx` — écran liste + formulaire + code-barres.
+- `app/src/lib/sync.ts` — push/pull de la table `rtr`.
+- `app/src/components/Layout.tsx` — bouton d'accès dans l'en-tête.
+- `app/src/App.tsx` — route `/rtr`.
+- `supabase/schema.sql` — table `public.rtr` + RLS (à ré-exécuter dans Supabase).
+
+> **Important :** après déploiement, exécuter le `schema.sql` à jour dans Supabase pour
+> créer la table `rtr`. Tant qu'elle n'existe pas, l'appli fonctionne (les régimes
+> restent stockés en local) mais ne se synchronise pas.
+
+## Comment ça marche (offline-first)
+
+- L'UI lit et écrit **uniquement dans IndexedDB** (Dexie) : instantané, hors-ligne.
+- `app/src/lib/sync.ts` réconcilie avec Supabase dès qu'il y a du réseau + une session :
+  **push** des lignes `_dirty`, **pull** incrémental par curseur `updated_at`.
+- Suppression = **soft-delete** (`deleted = true`). Conflits : dernier qui écrit gagne.
+- La barre en haut indique l'état réseau, la dernière synchro et le nombre de
   modifications en attente ; un tap force la synchro.
-
-## Limites connues / pistes d'extension
-
-- Le journal affiche "vous" sur tes entres ; pour afficher le **nom des autres
-  auteurs**, synchroniser aussi la table `profiles` dans Dexie et faire la jointure.
-- Pas de gestion des pices jointes / certificats PDF (seulement une rfrence + URL).
-- Ajouter un site : `src/lib/types.ts` (`SITES`).
-- Ajouter un radionuclide : `src/lib/decay.ts` (`HALF_LIVES_DAYS`).
-- Ajouter un module : crer `src/modules/<x>/`, une table + RLS dans `schema.sql`,
-  une table Dexie dans `src/lib/db.ts`, et l'intgrer  `sync.ts` + au routeur.
-
-## Arborescence
-
-```
-portail-tech/
- supabase/schema.sql      # tables + RLS + triggers
- src/
-   lib/                   # supabase, db (Dexie), sync, decay, types
-   auth/                  # AuthProvider, RequireAuth, Login
-   components/            # Layout, SyncStatus, Chips
-   modules/
-     ecme/                # EtalonsList, EtalonDetail (dcroissance)
-     imputations/         # ImputationsView
-     journal/             # JournalView
- .env.example
- vite.config.ts           # PWA + base configurable (VITE_BASE)
-```
