@@ -495,3 +495,37 @@ create policy interv_lignes_rw on public.intervention_lignes for all to authenti
 
 -- Trigramme de l'exécutant (préremplissage des lignes d'intervention)
 alter table public.planning_params add column if not exists trigramme text;
+
+-- ===========================================================================
+-- Bibliothèque RTR : IZ (codes d'accès des régimes de travail radiologique)
+-- Perso : chaque technicien ne voit / modifie que ses IZ (synchro multi-appareils).
+-- ===========================================================================
+create table if not exists public.rtr_iz (
+  id uuid primary key default gen_random_uuid(),
+  code text not null,                     -- code IZ (scanné ou saisi)
+  label text,                             -- libellé court
+  site text,
+  tranche text,
+  local text,                             -- local / repère SIPN
+  tags text[] not null default '{}',
+  notes text,
+  barcode_format text,                    -- CODE128 | CODE39 | EAN13 | ITF
+  use_count int not null default 0,
+  last_used timestamptz,
+  created_at timestamptz not null default now(),
+  user_id uuid default auth.uid() references auth.users(id) on delete cascade,
+  updated_at timestamptz not null default now(),
+  deleted boolean not null default false
+);
+create index if not exists idx_rtr_iz_user on public.rtr_iz(user_id);
+create index if not exists idx_rtr_iz_updated on public.rtr_iz(updated_at);
+
+drop trigger if exists trg_rtr_iz_updated on public.rtr_iz;
+create trigger trg_rtr_iz_updated before update on public.rtr_iz
+  for each row execute function public.set_updated_at();
+
+alter table public.rtr_iz enable row level security;
+drop policy if exists rtr_iz_own on public.rtr_iz;
+create policy rtr_iz_own on public.rtr_iz for all to authenticated
+  using (user_id = auth.uid())
+  with check (user_id = auth.uid());
