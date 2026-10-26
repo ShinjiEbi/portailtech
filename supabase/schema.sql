@@ -509,7 +509,7 @@ create table if not exists public.rtr_iz (
   local text,                             -- local / repère SIPN
   tags text[] not null default '{}',
   notes text,
-  barcode_format text,                    -- CODE128 | CODE39 | EAN13 | ITF
+  barcode_format text,                    -- CODE39 (fiches EDF) | CODE128 | EAN13 | ITF
   use_count int not null default 0,
   last_used timestamptz,
   created_at timestamptz not null default now(),
@@ -517,6 +517,23 @@ create table if not exists public.rtr_iz (
   updated_at timestamptz not null default now(),
   deleted boolean not null default false
 );
+-- champs de la fiche individuelle RTR (EDF)
+alter table public.rtr_iz
+  add column if not exists num_iz text,
+  add column if not exists indice text,
+  add column if not exists code_travail text,
+  add column if not exists num_act text,
+  add column if not exists validite_debut date,
+  add column if not exists validite_fin date,
+  add column if not exists activite text,
+  add column if not exists intervenant text,
+  add column if not exists projet text,
+  add column if not exists objet text,
+  add column if not exists ded_max numeric,
+  add column if not exists ded_neutron numeric,
+  add column if not exists dose_moy numeric,
+  add column if not exists dose_jour numeric,
+  add column if not exists ded_trajet numeric;
 create index if not exists idx_rtr_iz_user on public.rtr_iz(user_id);
 create index if not exists idx_rtr_iz_updated on public.rtr_iz(updated_at);
 
@@ -529,3 +546,39 @@ drop policy if exists rtr_iz_own on public.rtr_iz;
 create policy rtr_iz_own on public.rtr_iz for all to authenticated
   using (user_id = auth.uid())
   with check (user_id = auth.uid());
+
+-- ===========================================================================
+-- Constats de vérification (NT170, NT200, ABPM…) liés aux lignes d'intervention.
+-- values = saisies du formulaire (jsonb) ; le PDF est régénéré côté appli.
+-- Visibilité / écriture : celles du listing parent (partagé ou perso).
+-- ===========================================================================
+create table if not exists public.constats (
+  id uuid primary key default gen_random_uuid(),
+  listing_id uuid not null references public.intervention_listings(id) on delete cascade,
+  ligne_id uuid not null references public.intervention_lignes(id) on delete cascade,
+  template_id text not null,
+  values jsonb not null default '{}'::jsonb,
+  user_id uuid default auth.uid() references auth.users(id) on delete cascade,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  deleted boolean not null default false
+);
+create index if not exists idx_constats_ligne on public.constats(ligne_id);
+create index if not exists idx_constats_listing on public.constats(listing_id);
+create index if not exists idx_constats_updated on public.constats(updated_at);
+
+drop trigger if exists trg_constats_updated on public.constats;
+create trigger trg_constats_updated before update on public.constats
+  for each row execute function public.set_updated_at();
+
+alter table public.constats enable row level security;
+drop policy if exists constats_rw on public.constats;
+create policy constats_rw on public.constats for all to authenticated
+  using (exists (
+    select 1 from public.intervention_listings l
+    where l.id = listing_id and (l.scope = 'partage' or l.user_id = auth.uid())
+  ))
+  with check (exists (
+    select 1 from public.intervention_listings l
+    where l.id = listing_id and (l.scope = 'partage' or l.user_id = auth.uid())
+  ));
