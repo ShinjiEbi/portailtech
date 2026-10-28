@@ -1,0 +1,4530 @@
+{
+ "id": "ABPM",
+ "pages": 3,
+ "header": [
+  {
+   "id": "delivre_a",
+   "page": 0,
+   "x": 490,
+   "y": 74.9,
+   "size": 8,
+   "align": "left"
+  },
+  {
+   "id": "date_verif",
+   "page": 0,
+   "x": 490,
+   "y": 86.2,
+   "size": 8,
+   "align": "left"
+  },
+  {
+   "id": "sn",
+   "page": 0,
+   "x": 374.1,
+   "y": 122.0,
+   "size": 8,
+   "align": "center"
+  },
+  {
+   "id": "id_client",
+   "page": 0,
+   "x": 450.2,
+   "y": 122.0,
+   "size": 8,
+   "align": "center"
+  },
+  {
+   "id": "localisation",
+   "page": 0,
+   "x": 527.3,
+   "y": 122.0,
+   "size": 8,
+   "align": "center"
+  }
+ ],
+ "etats": [
+  {
+   "group": "entree",
+   "label": "Dans les spécifications",
+   "page": 0,
+   "x": 43.7,
+   "y": 158.5,
+   "s": 7.0
+  },
+  {
+   "group": "entree",
+   "label": "Hors spécifications",
+   "page": 0,
+   "x": 43.7,
+   "y": 167.8,
+   "s": 7.0
+  },
+  {
+   "group": "entree",
+   "label": "En panne",
+   "page": 0,
+   "x": 43.7,
+   "y": 177.0,
+   "s": 7.0
+  },
+  {
+   "group": "entree",
+   "label": "Endommagé",
+   "page": 0,
+   "x": 43.7,
+   "y": 186.1,
+   "s": 7.0
+  },
+  {
+   "group": "intervention",
+   "label": "Réparation",
+   "page": 0,
+   "x": 157.1,
+   "y": 158.5,
+   "s": 7.0
+  },
+  {
+   "group": "intervention",
+   "label": "Chgt filtre poral",
+   "page": 0,
+   "x": 214.4,
+   "y": 158.5,
+   "s": 7.0
+  },
+  {
+   "group": "intervention",
+   "label": "Vérification",
+   "page": 0,
+   "x": 157.1,
+   "y": 167.8,
+   "s": 7.0
+  },
+  {
+   "group": "intervention",
+   "label": "Chgt palettes",
+   "page": 0,
+   "x": 214.9,
+   "y": 167.8,
+   "s": 7.0
+  },
+  {
+   "group": "intervention",
+   "label": "Ajustage",
+   "page": 0,
+   "x": 157.1,
+   "y": 177.0,
+   "s": 7.0
+  },
+  {
+   "group": "intervention",
+   "label": "Retour en l’état",
+   "page": 0,
+   "x": 157.1,
+   "y": 186.1,
+   "s": 7.0
+  },
+  {
+   "group": "sortie",
+   "label": "Dans les spécifications",
+   "page": 0,
+   "x": 292.1,
+   "y": 158.5,
+   "s": 7.0
+  },
+  {
+   "group": "sortie",
+   "label": "Hors spécifications",
+   "page": 0,
+   "x": 292.1,
+   "y": 167.8,
+   "s": 7.0
+  },
+  {
+   "group": "sortie",
+   "label": "En panne",
+   "page": 0,
+   "x": 292.1,
+   "y": 177.0,
+   "s": 7.0
+  },
+  {
+   "group": "sortie",
+   "label": "Endommagé",
+   "page": 0,
+   "x": 292.1,
+   "y": 186.1,
+   "s": 7.0
+  },
+  {
+   "group": "jugement",
+   "label": "Conforme",
+   "page": 0,
+   "x": 418.1,
+   "y": 154.1,
+   "s": 7.0
+  },
+  {
+   "group": "jugement",
+   "label": "Conforme après intervention",
+   "page": 0,
+   "x": 418.1,
+   "y": 163.3,
+   "s": 7.0
+  },
+  {
+   "group": "jugement",
+   "label": "Non conforme",
+   "page": 0,
+   "x": 418.1,
+   "y": 172.5,
+   "s": 7.0
+  }
+ ],
+ "sources": [
+  {
+   "id": "src1",
+   "label": "Source de 239Pu entre 1 et 4 kBq (de type S8) n° : Activité en Bq:",
+   "rn": "Pu-239",
+   "types": [
+    "S8"
+   ],
+   "page": 0,
+   "num": {
+    "x": 258.3,
+    "y": 249.1,
+    "w": 64.6
+   },
+   "act": {
+    "x": 381.0,
+    "y": 249.1
+   }
+  },
+  {
+   "id": "src2",
+   "label": "Source de 137Cs entre 1 et 4 kBq (de type S8) n° : Activité en Bq:",
+   "rn": "Cs-137",
+   "types": [
+    "S8"
+   ],
+   "page": 0,
+   "num": {
+    "x": 258.3,
+    "y": 258.8,
+    "w": 64.8
+   },
+   "act": {
+    "x": 381.3,
+    "y": 258.8
+   }
+  },
+  {
+   "id": "src3",
+   "label": "DP11 ou équivalent n° :",
+   "rn": null,
+   "types": [],
+   "page": 0,
+   "num": {
+    "x": 166.8,
+    "y": 268.5,
+    "w": 405.2
+   },
+   "act": null
+  }
+ ],
+ "personnes": [
+  {
+   "id": "exec",
+   "page": 0,
+   "nom": {
+    "x": 199.3,
+    "y": 305.4
+   },
+   "sig": {
+    "x": 450.6,
+    "y": 299.4
+   }
+  },
+  {
+   "id": "ct",
+   "page": 0,
+   "nom": {
+    "x": 200.0,
+    "y": 323.7
+   },
+   "sig": {
+    "x": 450.6,
+    "y": 317.7
+   }
+  }
+ ],
+ "rows": [
+  {
+   "kind": "titre",
+   "page": 0,
+   "label": "4.3 Contrôle général",
+   "bold": true
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 389.6,
+   "y1": 402.8,
+   "label": "Contrôle d’aspect",
+   "tol": "Conforme",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 392.7,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 392.7,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 392.7,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 392.7,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 389.6,
+    "y1": 402.8
+   }
+  },
+  {
+   "kind": "titre",
+   "page": 0,
+   "label": "4.4 Suivi de la séquence de mise en service",
+   "bold": true
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 416.1,
+   "y1": 429.3,
+   "label": "Contrôle de la mise en service sans défaut",
+   "tol": "Conforme",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 419.2,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 419.2,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 419.2,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 419.2,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 416.1,
+    "y1": 429.3
+   }
+  },
+  {
+   "kind": "titre",
+   "page": 0,
+   "label": "4.6.1 Version logiciels",
+   "bold": true
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 442.5,
+   "y1": 455.8,
+   "label": "Logiciel de base",
+   "tol": "Valeur lue",
+   "avant": {
+    "type": "text",
+    "x": 328.2,
+    "w": 81.0,
+    "y0": 442.5,
+    "y1": 455.8
+   },
+   "apres": {
+    "type": "text",
+    "x": 413.2,
+    "w": 81.1,
+    "y0": 442.5,
+    "y1": 455.8
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 442.5,
+    "y1": 455.8
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 455.8,
+   "y1": 469.0,
+   "label": "Logiciel d’application",
+   "tol": "Valeur lue",
+   "avant": {
+    "type": "text",
+    "x": 328.2,
+    "w": 81.0,
+    "y0": 455.8,
+    "y1": 469.0
+   },
+   "apres": {
+    "type": "text",
+    "x": 413.2,
+    "w": 81.1,
+    "y0": 455.8,
+    "y1": 469.0
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 455.8,
+    "y1": 469.0
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 469.0,
+   "y1": 482.3,
+   "label": "Table des paramètres",
+   "tol": "Valeur lue",
+   "avant": {
+    "type": "text",
+    "x": 328.2,
+    "w": 81.0,
+    "y0": 469.0,
+    "y1": 482.3
+   },
+   "apres": {
+    "type": "text",
+    "x": 413.2,
+    "w": 81.1,
+    "y0": 469.0,
+    "y1": 482.3
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 469.0,
+    "y1": 482.3
+   }
+  },
+  {
+   "kind": "titre",
+   "page": 0,
+   "label": "4.6.2 Seuils d’alarme (en Bq/m3)",
+   "bold": true
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 495.5,
+   "y1": 508.7,
+   "label": "α Act. S1",
+   "tol": "Valeur lue",
+   "avant": {
+    "type": "textso",
+    "so": {
+     "v": "SO",
+     "x": 386.1,
+     "y": 498.8,
+     "s": 7.0
+    },
+    "x": 328.2,
+    "w": 53.9,
+    "y0": 495.5,
+    "y1": 508.7
+   },
+   "apres": {
+    "type": "textso",
+    "so": {
+     "v": "SO",
+     "x": 471.2,
+     "y": 498.8,
+     "s": 7.0
+    },
+    "x": 413.2,
+    "w": 54.0,
+    "y0": 495.5,
+    "y1": 508.7
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 495.5,
+    "y1": 508.7
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 508.7,
+   "y1": 522.1,
+   "label": "α Act. S2",
+   "tol": "Valeur lue",
+   "avant": {
+    "type": "textso",
+    "so": {
+     "v": "SO",
+     "x": 386.1,
+     "y": 512.0,
+     "s": 7.0
+    },
+    "x": 328.2,
+    "w": 53.9,
+    "y0": 508.7,
+    "y1": 522.1
+   },
+   "apres": {
+    "type": "textso",
+    "so": {
+     "v": "SO",
+     "x": 471.2,
+     "y": 512.0,
+     "s": 7.0
+    },
+    "x": 413.2,
+    "w": 54.0,
+    "y0": 508.7,
+    "y1": 522.1
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 508.7,
+    "y1": 522.1
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 522.1,
+   "y1": 535.3,
+   "label": "α Act. S3",
+   "tol": "Valeur lue",
+   "avant": {
+    "type": "textso",
+    "so": {
+     "v": "SO",
+     "x": 386.1,
+     "y": 525.2,
+     "s": 7.0
+    },
+    "x": 328.2,
+    "w": 53.9,
+    "y0": 522.1,
+    "y1": 535.3
+   },
+   "apres": {
+    "type": "textso",
+    "so": {
+     "v": "SO",
+     "x": 471.2,
+     "y": 525.2,
+     "s": 7.0
+    },
+    "x": 413.2,
+    "w": 54.0,
+    "y0": 522.1,
+    "y1": 535.3
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 522.1,
+    "y1": 535.3
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 535.3,
+   "y1": 548.6,
+   "label": "β Act. S1",
+   "tol": "Valeur lue",
+   "avant": {
+    "type": "textso",
+    "so": {
+     "v": "SO",
+     "x": 386.1,
+     "y": 538.5,
+     "s": 7.0
+    },
+    "x": 328.2,
+    "w": 53.9,
+    "y0": 535.3,
+    "y1": 548.6
+   },
+   "apres": {
+    "type": "textso",
+    "so": {
+     "v": "SO",
+     "x": 471.2,
+     "y": 538.5,
+     "s": 7.0
+    },
+    "x": 413.2,
+    "w": 54.0,
+    "y0": 535.3,
+    "y1": 548.6
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 535.3,
+    "y1": 548.6
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 548.6,
+   "y1": 561.8,
+   "label": "β Act. S2",
+   "tol": "Valeur lue",
+   "avant": {
+    "type": "textso",
+    "so": {
+     "v": "SO",
+     "x": 386.1,
+     "y": 551.7,
+     "s": 7.0
+    },
+    "x": 328.2,
+    "w": 53.9,
+    "y0": 548.6,
+    "y1": 561.8
+   },
+   "apres": {
+    "type": "textso",
+    "so": {
+     "v": "SO",
+     "x": 471.2,
+     "y": 551.7,
+     "s": 7.0
+    },
+    "x": 413.2,
+    "w": 54.0,
+    "y0": 548.6,
+    "y1": 561.8
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 548.6,
+    "y1": 561.8
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 561.8,
+   "y1": 575.1,
+   "label": "β Act. S3",
+   "tol": "Valeur lue",
+   "avant": {
+    "type": "textso",
+    "so": {
+     "v": "SO",
+     "x": 386.1,
+     "y": 565.0,
+     "s": 7.0
+    },
+    "x": 328.2,
+    "w": 53.9,
+    "y0": 561.8,
+    "y1": 575.1
+   },
+   "apres": {
+    "type": "textso",
+    "so": {
+     "v": "SO",
+     "x": 471.2,
+     "y": 565.0,
+     "s": 7.0
+    },
+    "x": 413.2,
+    "w": 54.0,
+    "y0": 561.8,
+    "y1": 575.1
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 561.8,
+    "y1": 575.1
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 575.1,
+   "y1": 588.3,
+   "label": "Doserate S1",
+   "tol": "Valeur lue",
+   "avant": {
+    "type": "textso",
+    "so": {
+     "v": "SO",
+     "x": 386.1,
+     "y": 578.2,
+     "s": 7.0
+    },
+    "x": 328.2,
+    "w": 53.9,
+    "y0": 575.1,
+    "y1": 588.3
+   },
+   "apres": {
+    "type": "textso",
+    "so": {
+     "v": "SO",
+     "x": 471.2,
+     "y": 578.2,
+     "s": 7.0
+    },
+    "x": 413.2,
+    "w": 54.0,
+    "y0": 575.1,
+    "y1": 588.3
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 575.1,
+    "y1": 588.3
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 588.3,
+   "y1": 601.5,
+   "label": "Doserate S2",
+   "tol": "Valeur lue",
+   "avant": {
+    "type": "textso",
+    "so": {
+     "v": "SO",
+     "x": 386.1,
+     "y": 591.5,
+     "s": 7.0
+    },
+    "x": 328.2,
+    "w": 53.9,
+    "y0": 588.3,
+    "y1": 601.5
+   },
+   "apres": {
+    "type": "textso",
+    "so": {
+     "v": "SO",
+     "x": 471.2,
+     "y": 591.5,
+     "s": 7.0
+    },
+    "x": 413.2,
+    "w": 54.0,
+    "y0": 588.3,
+    "y1": 601.5
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 588.3,
+    "y1": 601.5
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 601.5,
+   "y1": 614.8,
+   "label": "Doserate S3",
+   "tol": "Valeur lue",
+   "avant": {
+    "type": "textso",
+    "so": {
+     "v": "SO",
+     "x": 386.1,
+     "y": 604.8,
+     "s": 7.0
+    },
+    "x": 328.2,
+    "w": 53.9,
+    "y0": 601.5,
+    "y1": 614.8
+   },
+   "apres": {
+    "type": "textso",
+    "so": {
+     "v": "SO",
+     "x": 471.2,
+     "y": 604.8,
+     "s": 7.0
+    },
+    "x": 413.2,
+    "w": 54.0,
+    "y0": 601.5,
+    "y1": 614.8
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 601.5,
+    "y1": 614.8
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 614.8,
+   "y1": 628.0,
+   "label": "4.6.3 Mise à jour de la date et l’heure du LPDU",
+   "tol": "Conforme",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 617.9,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 617.9,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 617.9,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 617.9,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 614.8,
+    "y1": 628.0
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 628.0,
+   "y1": 641.3,
+   "label": "4.6.4 Contrôle des paramètres du filtre aérosol",
+   "tol": "Conforme",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 631.3,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 631.3,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 631.3,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 631.3,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 628.0,
+    "y1": 641.3
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 641.3,
+   "y1": 654.5,
+   "label": "4.6.5 Contrôle des paramètres d’acquisition",
+   "tol": "9600",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 644.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 644.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 644.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 644.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 641.3,
+    "y1": 654.5
+   }
+  },
+  {
+   "kind": "titre",
+   "page": 0,
+   "label": "4.6.6 Contrôle des paramètres algorithmes PIPS alpha",
+   "bold": true
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 667.8,
+   "y1": 681.1,
+   "label": "Débit de prélèvement",
+   "tol": "Débit ou Flow",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 671.0,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 671.0,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 671.0,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 671.0,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 667.8,
+    "y1": 681.1
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 681.1,
+   "y1": 694.3,
+   "label": "Seuil de saturation filtre",
+   "tol": "10 000 c/s",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 684.2,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 684.2,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 684.2,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 684.2,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 681.1,
+    "y1": 694.3
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 694.3,
+   "y1": 707.6,
+   "label": "Valeur min Activité Volu",
+   "tol": "0,01 Bq/m3",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 697.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 697.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 697.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 697.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 694.3,
+    "y1": 707.6
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 707.6,
+   "y1": 720.8,
+   "label": "Valeur max Activité Volu",
+   "tol": "10 000 Bq/m3",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 710.7,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 710.7,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 710.7,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 710.7,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 707.6,
+    "y1": 720.8
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 720.8,
+   "y1": 734.1,
+   "label": "Alpha artificiel",
+   "tol": "0,04",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 724.1,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 724.1,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 724.1,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 724.1,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 720.8,
+    "y1": 734.1
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 734.1,
+   "y1": 747.3,
+   "label": "Compensation systémique Bdf",
+   "tol": "0 c/s",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 737.3,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 737.3,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 737.3,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 737.3,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 734.1,
+    "y1": 747.3
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 747.3,
+   "y1": 760.5,
+   "label": "Pond. Comptage Alpha 214Po",
+   "tol": "0",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 750.6,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 750.6,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 750.6,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 750.6,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 747.3,
+    "y1": 760.5
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 760.5,
+   "y1": 773.9,
+   "label": "Pondération Comptage Alpha 218Po",
+   "tol": "0,09",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 763.8,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 763.8,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 763.8,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 763.8,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 760.5,
+    "y1": 773.9
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 773.9,
+   "y1": 787.1,
+   "label": "Grandeur physique GP1/GP2/GP3/GP4 (en Bq/m3)",
+   "tol": "0,01/0,1/1/10",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 777.0,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 777.0,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 777.0,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 777.0,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 773.9,
+    "y1": 787.1
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 72.5,
+   "y1": 85.7,
+   "label": "Ecart type relatif ETR1/ETR2/ETR3/ETR4 (en%)",
+   "tol": "50/15/15/15",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 75.7,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 75.7,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 75.7,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 75.7,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 72.5,
+    "y1": 85.7
+   }
+  },
+  {
+   "kind": "titre",
+   "page": 1,
+   "label": "4.6.7 Contrôle des paramètres algorithmes PIPS CumulAlpha",
+   "bold": true
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 99.0,
+   "y1": 112.2,
+   "label": "Débit de prélèvement",
+   "tol": "Débit ou Flow",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 102.3,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 102.3,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 102.3,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 102.3,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 99.0,
+    "y1": 112.2
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 112.2,
+   "y1": 125.5,
+   "label": "Efficacité détection Alpha (en c/s/Bq)",
+   "tol": "0,04",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 115.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 115.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 115.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 115.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 112.2,
+    "y1": 125.5
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 125.5,
+   "y1": 138.7,
+   "label": "Seconde fenêtre comp.",
+   "tol": "0",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 128.7,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 128.7,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 128.7,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 128.7,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 125.5,
+    "y1": 138.7
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 138.7,
+   "y1": 152.1,
+   "label": "Première fenêtre comp.",
+   "tol": "0,09",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 142.0,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 142.0,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 142.0,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 142.0,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 138.7,
+    "y1": 152.1
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 152.1,
+   "y1": 165.3,
+   "label": "Grandeur physique GP1/GP2/GP3/GP4 (en Bq/m3)",
+   "tol": "0,148/1,48/15/30",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 155.2,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 155.2,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 155.2,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 155.2,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 152.1,
+    "y1": 165.3
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 165.3,
+   "y1": 178.5,
+   "label": "Ecart type relatif ETR1/ETR2/ETR3/ETR4 (en%)",
+   "tol": "50/9/9/9",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 168.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 168.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 168.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 168.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 165.3,
+    "y1": 178.5
+   }
+  },
+  {
+   "kind": "titre",
+   "page": 1,
+   "label": "4.6.8 Contrôle des paramètres algorithmes PIPS bêta",
+   "bold": true
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 191.8,
+   "y1": 205.0,
+   "label": "Débit de prélèvement",
+   "tol": "Débit ou Flow",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 194.9,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 194.9,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 194.9,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 194.9,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 191.8,
+    "y1": 205.0
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 205.0,
+   "y1": 218.3,
+   "label": "Seuil de saturation filtre",
+   "tol": "10 000 c/s",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 208.2,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 208.2,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 208.2,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 208.2,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 205.0,
+    "y1": 218.3
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 218.3,
+   "y1": 231.5,
+   "label": "Valeur min Activité Volumique",
+   "tol": "1 Bq/m3",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 221.4,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 221.4,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 221.4,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 221.4,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 218.3,
+    "y1": 231.5
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 231.5,
+   "y1": 244.7,
+   "label": "Valeur max Activité Volumique",
+   "tol": "1E6 Bq/m3",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 234.7,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 234.7,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 234.7,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 234.7,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 231.5,
+    "y1": 244.7
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 244.7,
+   "y1": 258.0,
+   "label": "Période Rad. Isotope",
+   "tol": "1E12 s",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 247.9,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 247.9,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 247.9,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 247.9,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 244.7,
+    "y1": 258.0
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 258.0,
+   "y1": 271.2,
+   "label": "Pond. Comp gamma",
+   "tol": "1,2",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 261.3,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 261.3,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 261.3,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 261.3,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 258.0,
+    "y1": 271.2
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 271.2,
+   "y1": 284.6,
+   "label": "Comp. Systémique Bdf",
+   "tol": "0 C/s",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 274.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 274.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 274.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 274.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 271.2,
+    "y1": 284.6
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 284.6,
+   "y1": 297.8,
+   "label": "Seuil filtrage Bdf",
+   "tol": "0,3",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 287.7,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 287.7,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 287.7,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 287.7,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 284.6,
+    "y1": 297.8
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 297.8,
+   "y1": 311.1,
+   "label": "Compensation de l’activité bêta naturelle",
+   "tol": "Case cochée",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 301.0,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 301.0,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 301.0,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 301.0,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 297.8,
+    "y1": 311.1
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 311.1,
+   "y1": 324.3,
+   "label": "Grandeur physique GP1/GP2/GP3/GP4 (en Bq/m3)",
+   "tol": "0,5/30/100/1000",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 314.2,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 314.2,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 314.2,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 314.2,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 311.1,
+    "y1": 324.3
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 324.3,
+   "y1": 337.5,
+   "label": "Ecart type relatif ETR1/ETR2/ETR3/ETR4 (en%)",
+   "tol": "20/7,5/7,5/7,5",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 327.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 327.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 327.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 327.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 324.3,
+    "y1": 337.5
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 337.5,
+   "y1": 350.8,
+   "label": "212Po",
+   "tol": "0,0385",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 340.7,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 340.7,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 340.7,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 340.7,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 337.5,
+    "y1": 350.8
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 350.8,
+   "y1": 364.0,
+   "label": "214Po",
+   "tol": "0,0385",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 353.9,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 353.9,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 353.9,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 353.9,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 350.8,
+    "y1": 364.0
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 364.0,
+   "y1": 377.3,
+   "label": "214Po dans fenêtre 218Po",
+   "tol": "0,0015",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 367.2,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 367.2,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 367.2,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 367.2,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 364.0,
+    "y1": 377.3
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 377.3,
+   "y1": 390.5,
+   "label": "218Po",
+   "tol": "0,0367",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 380.4,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 380.4,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 380.4,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 380.4,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 377.3,
+    "y1": 390.5
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 390.5,
+   "y1": 403.7,
+   "label": "Bêta artificiel Cs137, Co60",
+   "tol": "0,055",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 393.8,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 393.8,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 393.8,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 393.8,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 390.5,
+    "y1": 403.7
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 403.7,
+   "y1": 417.0,
+   "label": "214Bi",
+   "tol": "0,1",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 407.0,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 407.0,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 407.0,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 407.0,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 403.7,
+    "y1": 417.0
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 417.0,
+   "y1": 430.2,
+   "label": "214Pb",
+   "tol": "0,045",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 420.3,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 420.3,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 420.3,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 420.3,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 417.0,
+    "y1": 430.2
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 430.2,
+   "y1": 443.6,
+   "label": "Fils du Rn",
+   "tol": "0,054",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 433.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 433.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 433.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 433.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 430.2,
+    "y1": 443.6
+   }
+  },
+  {
+   "kind": "titre",
+   "page": 1,
+   "label": "4.6.9 Contrôle des paramètres algorithmes PIPS Doserate",
+   "bold": true
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 456.8,
+   "y1": 470.1,
+   "label": "Eff. Détection (en C/s/µGy/h)",
+   "tol": "1",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 460.0,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 460.0,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 460.0,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 460.0,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 456.8,
+    "y1": 470.1
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 470.1,
+   "y1": 483.3,
+   "label": "Compensation systémique Bdf",
+   "tol": "0,15 c/s",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 473.2,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 473.2,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 473.2,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 473.2,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 470.1,
+    "y1": 483.3
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 483.3,
+   "y1": 496.5,
+   "label": "Durée max phase d’initialisation",
+   "tol": "100 s",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 486.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 486.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 486.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 486.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 483.3,
+    "y1": 496.5
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 496.5,
+   "y1": 509.8,
+   "label": "Valeur min par défaut",
+   "tol": "0,1 µGy/h",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 499.8,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 499.8,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 499.8,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 499.8,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 496.5,
+    "y1": 509.8
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 509.8,
+   "y1": 523.0,
+   "label": "Valeur max",
+   "tol": "100 000 µGy/h",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 512.9,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 512.9,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 512.9,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 512.9,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 509.8,
+    "y1": 523.0
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 523.0,
+   "y1": 536.3,
+   "label": "Ecart type relatif débit de dose",
+   "tol": "10 %",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 526.3,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 526.3,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 526.3,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 526.3,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 523.0,
+    "y1": 536.3
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 536.3,
+   "y1": 549.5,
+   "label": "Ecart type absolu débit de dose",
+   "tol": "0,1 µGy/h",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 539.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 539.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 539.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 539.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 536.3,
+    "y1": 549.5
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 549.5,
+   "y1": 562.8,
+   "label": "Durée max d’un cycle d’estimation",
+   "tol": "300 s",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 552.8,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 552.8,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 552.8,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 552.8,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 549.5,
+    "y1": 562.8
+   }
+  },
+  {
+   "kind": "titre",
+   "page": 1,
+   "label": "4.7 Contrôle de l’aéraulique",
+   "bold": true
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 576.1,
+   "y1": 589.3,
+   "label": "Relevé de l’horodateur",
+   "tol": "Valeur lue",
+   "avant": {
+    "type": "text",
+    "x": 328.2,
+    "w": 81.0,
+    "y0": 576.1,
+    "y1": 589.3
+   },
+   "apres": {
+    "type": "text",
+    "x": 413.2,
+    "w": 81.1,
+    "y0": 576.1,
+    "y1": 589.3
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 576.1,
+    "y1": 589.3
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 589.3,
+   "y1": 602.6,
+   "label": "Changement des palettes",
+   "tol": "Conforme",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 334.8,
+      "y": 592.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 356.5,
+      "y": 592.5,
+      "s": 7.0
+     },
+     {
+      "v": "SO",
+      "x": 384.0,
+      "y": 592.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 419.8,
+      "y": 592.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 441.5,
+      "y": 592.5,
+      "s": 7.0
+     },
+     {
+      "v": "SO",
+      "x": 469.1,
+      "y": 592.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 589.3,
+    "y1": 602.6
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 602.6,
+   "y1": 615.8,
+   "label": "Remise à 0 de l’horodateur (si possible)",
+   "tol": "Conforme",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 334.8,
+      "y": 605.7,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 356.5,
+      "y": 605.7,
+      "s": 7.0
+     },
+     {
+      "v": "SO",
+      "x": 384.0,
+      "y": 605.7,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 419.8,
+      "y": 605.7,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 441.5,
+      "y": 605.7,
+      "s": 7.0
+     },
+     {
+      "v": "SO",
+      "x": 469.1,
+      "y": 605.7,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 602.6,
+    "y1": 615.8
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 615.8,
+   "y1": 629.1,
+   "label": "Contrôle du débit",
+   "tol": "35 ± 2 l/min",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 619.0,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 619.0,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 619.0,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 619.0,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 615.8,
+    "y1": 629.1
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 629.1,
+   "y1": 642.3,
+   "label": "Contrôle du ΔP max",
+   "tol": "Conforme",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 632.2,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 632.2,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 632.2,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 632.2,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 629.1,
+    "y1": 642.3
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 642.3,
+   "y1": 655.5,
+   "label": "Contrôle du ΔP min",
+   "tol": "Conforme",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 645.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 645.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 645.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 645.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 642.3,
+    "y1": 655.5
+   }
+  },
+  {
+   "kind": "titre",
+   "page": 1,
+   "label": "4.8 Calibrage en énergie",
+   "bold": true
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 668.9,
+   "y1": 682.1,
+   "label": "Entrée gain ampli Alpha, Bêta du",
+   "tol": "0,6 ≤ gain ≤ 1,2",
+   "avant": {
+    "type": "text",
+    "x": 328.2,
+    "w": 81.0,
+    "y0": 668.9,
+    "y1": 682.1
+   },
+   "apres": {
+    "type": "text",
+    "x": 413.2,
+    "w": 81.1,
+    "y0": 668.9,
+    "y1": 682.1
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 668.9,
+    "y1": 682.1
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 682.1,
+   "y1": 695.4,
+   "label": "Entrée gain ampli Gamma",
+   "tol": "0,6 ≤ gain ≤ 1,2",
+   "avant": {
+    "type": "text",
+    "x": 328.2,
+    "w": 81.0,
+    "y0": 682.1,
+    "y1": 695.4
+   },
+   "apres": {
+    "type": "text",
+    "x": 413.2,
+    "w": 81.1,
+    "y0": 682.1,
+    "y1": 695.4
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 682.1,
+    "y1": 695.4
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 695.4,
+   "y1": 708.6,
+   "label": "LPDU Offset Calibration",
+   "tol": "Valeur lue",
+   "avant": {
+    "type": "text",
+    "x": 328.2,
+    "w": 81.0,
+    "y0": 695.4,
+    "y1": 708.6
+   },
+   "apres": {
+    "type": "text",
+    "x": 413.2,
+    "w": 81.1,
+    "y0": 695.4,
+    "y1": 708.6
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 695.4,
+    "y1": 708.6
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 708.6,
+   "y1": 721.8,
+   "label": "Pente",
+   "tol": "Valeur lue",
+   "avant": {
+    "type": "text",
+    "x": 328.2,
+    "w": 81.0,
+    "y0": 708.6,
+    "y1": 721.8
+   },
+   "apres": {
+    "type": "text",
+    "x": 413.2,
+    "w": 81.1,
+    "y0": 708.6,
+    "y1": 721.8
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 708.6,
+    "y1": 721.8
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 721.8,
+   "y1": 735.1,
+   "label": "Quadratique",
+   "tol": "Valeur lue",
+   "avant": {
+    "type": "text",
+    "x": 328.2,
+    "w": 81.0,
+    "y0": 721.8,
+    "y1": 735.1
+   },
+   "apres": {
+    "type": "text",
+    "x": 413.2,
+    "w": 81.1,
+    "y0": 721.8,
+    "y1": 735.1
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 721.8,
+    "y1": 735.1
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 735.1,
+   "y1": 748.3,
+   "label": "Calibration nucléaire (en alpha max)",
+   "tol": "420 ± 20 canaux",
+   "avant": {
+    "type": "text",
+    "x": 328.2,
+    "w": 81.0,
+    "y0": 735.1,
+    "y1": 748.3
+   },
+   "apres": {
+    "type": "text",
+    "x": 413.2,
+    "w": 81.1,
+    "y0": 735.1,
+    "y1": 748.3
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 735.1,
+    "y1": 748.3
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 748.3,
+   "y1": 761.6,
+   "label": "Enregistrement du spectre",
+   "tol": "Conforme",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 751.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 751.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 751.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 751.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 748.3,
+    "y1": 761.6
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 761.6,
+   "y1": 774.8,
+   "label": "Réglage de la voie gamma",
+   "tol": "Conforme",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 764.7,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 764.7,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 764.7,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 764.7,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 761.6,
+    "y1": 774.8
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 774.8,
+   "y1": 788.1,
+   "label": "Enregistrement du spectre",
+   "tol": "Conforme",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 778.1,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 778.1,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 778.1,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 778.1,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 774.8,
+    "y1": 788.1
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 2,
+   "y0": 72.5,
+   "y1": 85.7,
+   "label": "Remise en configuration Alpha, Bêta, Gamma",
+   "tol": "Conforme",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 75.7,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 75.7,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 75.7,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 75.7,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 72.5,
+    "y1": 85.7
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 2,
+   "y0": 85.7,
+   "y1": 99.0,
+   "label": "Calibration sur 1er point AlphaMax (218Po)",
+   "tol": "4930 ± 50 keV",
+   "avant": {
+    "type": "text",
+    "x": 328.2,
+    "w": 81.0,
+    "y0": 85.7,
+    "y1": 99.0
+   },
+   "apres": {
+    "type": "text",
+    "x": 413.2,
+    "w": 81.1,
+    "y0": 85.7,
+    "y1": 99.0
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 85.7,
+    "y1": 99.0
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 2,
+   "y0": 99.0,
+   "y1": 112.2,
+   "label": "spectre 2ème point AlphaMax (214Po)",
+   "tol": "6750 ± 60 keV",
+   "avant": {
+    "type": "text",
+    "x": 328.2,
+    "w": 81.0,
+    "y0": 99.0,
+    "y1": 112.2
+   },
+   "apres": {
+    "type": "text",
+    "x": 413.2,
+    "w": 81.1,
+    "y0": 99.0,
+    "y1": 112.2
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 99.0,
+    "y1": 112.2
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 2,
+   "y0": 112.2,
+   "y1": 125.5,
+   "label": "descendants radon Enregistrement du spectre",
+   "tol": "Conforme",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 115.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 115.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 115.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 115.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 112.2,
+    "y1": 125.5
+   }
+  },
+  {
+   "kind": "titre",
+   "page": 2,
+   "label": "4.9 Contrôle des bruits de fonds",
+   "bold": true
+  },
+  {
+   "kind": "mesure",
+   "page": 2,
+   "y0": 138.7,
+   "y1": 152.1,
+   "label": "AlphaCps",
+   "tol": "≤ 0,001 c/s",
+   "avant": {
+    "type": "text",
+    "x": 328.2,
+    "w": 81.0,
+    "y0": 138.7,
+    "y1": 152.1
+   },
+   "apres": {
+    "type": "text",
+    "x": 413.2,
+    "w": 81.1,
+    "y0": 138.7,
+    "y1": 152.1
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 138.7,
+    "y1": 152.1
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 2,
+   "y0": 152.1,
+   "y1": 165.3,
+   "label": "BêtaCps",
+   "tol": "≤ 3,2 c/s",
+   "avant": {
+    "type": "text",
+    "x": 328.2,
+    "w": 81.0,
+    "y0": 152.1,
+    "y1": 165.3
+   },
+   "apres": {
+    "type": "text",
+    "x": 413.2,
+    "w": 81.1,
+    "y0": 152.1,
+    "y1": 165.3
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 152.1,
+    "y1": 165.3
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 2,
+   "y0": 165.3,
+   "y1": 178.5,
+   "label": "GammaCps",
+   "tol": "≤ 1,2 c/s",
+   "avant": {
+    "type": "text",
+    "x": 328.2,
+    "w": 81.0,
+    "y0": 165.3,
+    "y1": 178.5
+   },
+   "apres": {
+    "type": "text",
+    "x": 413.2,
+    "w": 81.1,
+    "y0": 165.3,
+    "y1": 178.5
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 165.3,
+    "y1": 178.5
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 2,
+   "y0": 178.5,
+   "y1": 191.8,
+   "label": "218Po",
+   "tol": "≤ 0,05 c/s",
+   "avant": {
+    "type": "text",
+    "x": 328.2,
+    "w": 81.0,
+    "y0": 178.5,
+    "y1": 191.8
+   },
+   "apres": {
+    "type": "text",
+    "x": 413.2,
+    "w": 81.1,
+    "y0": 178.5,
+    "y1": 191.8
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 178.5,
+    "y1": 191.8
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 2,
+   "y0": 191.8,
+   "y1": 205.0,
+   "label": "214Po",
+   "tol": "≤ 0,05 c/s",
+   "avant": {
+    "type": "text",
+    "x": 328.2,
+    "w": 81.0,
+    "y0": 191.8,
+    "y1": 205.0
+   },
+   "apres": {
+    "type": "text",
+    "x": 413.2,
+    "w": 81.1,
+    "y0": 191.8,
+    "y1": 205.0
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 191.8,
+    "y1": 205.0
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 2,
+   "y0": 205.0,
+   "y1": 218.3,
+   "label": "212Po",
+   "tol": "≤ 0,05 c/s",
+   "avant": {
+    "type": "text",
+    "x": 328.2,
+    "w": 81.0,
+    "y0": 205.0,
+    "y1": 218.3
+   },
+   "apres": {
+    "type": "text",
+    "x": 413.2,
+    "w": 81.1,
+    "y0": 205.0,
+    "y1": 218.3
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 205.0,
+    "y1": 218.3
+   }
+  },
+  {
+   "kind": "titre",
+   "page": 2,
+   "label": "4.10 Contrôle des rendements",
+   "bold": true
+  },
+  {
+   "kind": "mesure",
+   "page": 2,
+   "y0": 231.5,
+   "y1": 244.7,
+   "label": "Rendement γ au 137Cs sur 4π",
+   "tol": "15 ≤ R ≤ 23%",
+   "avant": {
+    "type": "text",
+    "x": 328.2,
+    "w": 81.0,
+    "y0": 231.5,
+    "y1": 244.7
+   },
+   "apres": {
+    "type": "text",
+    "x": 413.2,
+    "w": 81.1,
+    "y0": 231.5,
+    "y1": 244.7
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 231.5,
+    "y1": 244.7
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 2,
+   "y0": 244.7,
+   "y1": 258.0,
+   "label": "Rendement β au 137Cs sur 4π",
+   "tol": "5,5 ≤ R ≤ 9,5%",
+   "avant": {
+    "type": "text",
+    "x": 328.2,
+    "w": 81.0,
+    "y0": 244.7,
+    "y1": 258.0
+   },
+   "apres": {
+    "type": "text",
+    "x": 413.2,
+    "w": 81.1,
+    "y0": 244.7,
+    "y1": 258.0
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 244.7,
+    "y1": 258.0
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 2,
+   "y0": 258.0,
+   "y1": 271.2,
+   "label": "Rendement α au 239Pu sur 4π",
+   "tol": "5 ≤ R ≤ 9%",
+   "avant": {
+    "type": "text",
+    "x": 328.2,
+    "w": 81.0,
+    "y0": 258.0,
+    "y1": 271.2
+   },
+   "apres": {
+    "type": "text",
+    "x": 413.2,
+    "w": 81.1,
+    "y0": 258.0,
+    "y1": 271.2
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 258.0,
+    "y1": 271.2
+   }
+  },
+  {
+   "kind": "titre",
+   "page": 2,
+   "label": "4.11 Contrôle de la balise",
+   "bold": true
+  },
+  {
+   "kind": "mesure",
+   "page": 2,
+   "y0": 284.6,
+   "y1": 303.4,
+   "label": "Sonde de détection non Contrôle des connecté",
+   "tol": "Conforme",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 290.6,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 290.6,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 290.6,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 290.6,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 284.6,
+    "y1": 303.4
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 2,
+   "y0": 303.4,
+   "y1": 316.7,
+   "label": "défauts sonde Défaut température",
+   "tol": "Conforme",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 306.6,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 306.6,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 306.6,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 306.6,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 303.4,
+    "y1": 316.7
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 2,
+   "y0": 316.7,
+   "y1": 329.9,
+   "label": "Défaut filtre",
+   "tol": "Conforme",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 319.8,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 319.8,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 319.8,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 319.8,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 316.7,
+    "y1": 329.9
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 2,
+   "y0": 329.9,
+   "y1": 343.1,
+   "label": "Contrôle du bon fonctionnement",
+   "tol": "Conforme",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 333.2,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 333.2,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 333.2,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 333.2,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 329.9,
+    "y1": 343.1
+   }
+  },
+  {
+   "kind": "titre",
+   "page": 2,
+   "label": "4.12 Sauvegarde des fichiers sur clef USB",
+   "bold": true
+  },
+  {
+   "kind": "mesure",
+   "page": 2,
+   "y0": 356.4,
+   "y1": 369.6,
+   "label": "Sauvegarde des paramètres de la balise",
+   "tol": "Conforme",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 359.6,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 359.6,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 359.6,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 359.6,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 498.3,
+    "w": 73.0,
+    "y0": 356.4,
+    "y1": 369.6
+   }
+  },
+  {
+   "kind": "titre",
+   "page": 2,
+   "label": "4.13 Contrôle technique renforcé",
+   "bold": true
+  },
+  {
+   "kind": "mesure",
+   "page": 2,
+   "y0": 383.0,
+   "y1": 411.0,
+   "label": "Vérification des fichiers de la clef USB",
+   "tol": "Conforme",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 348.4,
+      "y": 393.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 370.1,
+      "y": 393.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 433.5,
+      "y": 393.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 455.2,
+      "y": 393.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "obsFields": [
+    {
+     "id": "nom",
+     "x": 526.1,
+     "y": 383.5
+    },
+    {
+     "id": "visa",
+     "x": 524.8,
+     "y": 392.6
+    }
+   ]
+  }
+ ],
+ "comments": {
+  "page": 2,
+  "x": 38.6,
+  "y": 439.9,
+  "w": 500,
+  "h": 292.9,
+  "size": 9
+ },
+ "everyPage": [
+  {
+   "id": "numero",
+   "page": 0,
+   "x": 492.0,
+   "y": 57.1,
+   "size": 8,
+   "align": "left"
+  },
+  {
+   "id": "numero",
+   "page": 1,
+   "x": 492.0,
+   "y": 57.1,
+   "size": 8,
+   "align": "left"
+  },
+  {
+   "id": "numero",
+   "page": 2,
+   "x": 492.0,
+   "y": 57.1,
+   "size": 8,
+   "align": "left"
+  }
+ ]
+}

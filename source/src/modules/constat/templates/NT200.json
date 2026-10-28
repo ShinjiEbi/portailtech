@@ -1,0 +1,2273 @@
+{
+ "id": "NT200",
+ "pages": 2,
+ "header": [
+  {
+   "id": "delivre_a",
+   "page": 0,
+   "x": 490,
+   "y": 81.3,
+   "size": 8,
+   "align": "left"
+  },
+  {
+   "id": "date_verif",
+   "page": 0,
+   "x": 490,
+   "y": 94.0,
+   "size": 8,
+   "align": "left"
+  },
+  {
+   "id": "sn",
+   "page": 0,
+   "x": 370.4,
+   "y": 140.6,
+   "size": 8,
+   "align": "center"
+  },
+  {
+   "id": "id_client",
+   "page": 0,
+   "x": 451.3,
+   "y": 140.6,
+   "size": 8,
+   "align": "center"
+  },
+  {
+   "id": "localisation",
+   "page": 0,
+   "x": 532.0,
+   "y": 140.6,
+   "size": 8,
+   "align": "center"
+  }
+ ],
+ "etats": [
+  {
+   "group": "entree",
+   "label": "Dans les spécifications",
+   "page": 0,
+   "x": 43.7,
+   "y": 177.0,
+   "s": 7.0
+  },
+  {
+   "group": "entree",
+   "label": "Hors spécifications",
+   "page": 0,
+   "x": 43.7,
+   "y": 186.3,
+   "s": 7.0
+  },
+  {
+   "group": "entree",
+   "label": "En panne",
+   "page": 0,
+   "x": 43.7,
+   "y": 195.5,
+   "s": 7.0
+  },
+  {
+   "group": "entree",
+   "label": "Endommagé",
+   "page": 0,
+   "x": 43.7,
+   "y": 204.6,
+   "s": 7.0
+  },
+  {
+   "group": "intervention",
+   "label": "Réparation",
+   "page": 0,
+   "x": 157.1,
+   "y": 177.0,
+   "s": 7.0
+  },
+  {
+   "group": "intervention",
+   "label": "Vérification",
+   "page": 0,
+   "x": 157.1,
+   "y": 186.3,
+   "s": 7.0
+  },
+  {
+   "group": "intervention",
+   "label": "Cht détecteur",
+   "page": 0,
+   "x": 217.0,
+   "y": 186.3,
+   "s": 7.0
+  },
+  {
+   "group": "intervention",
+   "label": "Ajustage",
+   "page": 0,
+   "x": 157.1,
+   "y": 195.5,
+   "s": 7.0
+  },
+  {
+   "group": "intervention",
+   "label": "Retour en l’état",
+   "page": 0,
+   "x": 157.1,
+   "y": 204.6,
+   "s": 7.0
+  },
+  {
+   "group": "sortie",
+   "label": "Dans les spécifications",
+   "page": 0,
+   "x": 292.1,
+   "y": 177.0,
+   "s": 7.0
+  },
+  {
+   "group": "sortie",
+   "label": "Hors spécifications",
+   "page": 0,
+   "x": 292.1,
+   "y": 186.3,
+   "s": 7.0
+  },
+  {
+   "group": "sortie",
+   "label": "En panne",
+   "page": 0,
+   "x": 292.1,
+   "y": 195.5,
+   "s": 7.0
+  },
+  {
+   "group": "sortie",
+   "label": "Endommagé",
+   "page": 0,
+   "x": 292.1,
+   "y": 204.6,
+   "s": 7.0
+  },
+  {
+   "group": "jugement",
+   "label": "Conforme",
+   "page": 0,
+   "x": 418.1,
+   "y": 172.6,
+   "s": 7.0
+  },
+  {
+   "group": "jugement",
+   "label": "Conforme après intervention",
+   "page": 0,
+   "x": 418.1,
+   "y": 181.8,
+   "s": 7.0
+  },
+  {
+   "group": "jugement",
+   "label": "Non conforme",
+   "page": 0,
+   "x": 418.1,
+   "y": 190.9,
+   "s": 7.0
+  }
+ ],
+ "sources": [
+  {
+   "id": "src1",
+   "label": "Source S3 ou S4 de 60Co de type ESAL20 de 2 à 6KBq ± 20% n° : Activité en Bq :",
+   "rn": "Co-60",
+   "types": [
+    "S3",
+    "S4"
+   ],
+   "page": 0,
+   "num": {
+    "x": 317.9,
+    "y": 276.8,
+    "w": 75.7
+   },
+   "act": {
+    "x": 454.1,
+    "y": 276.8
+   }
+  },
+  {
+   "id": "src2",
+   "label": "Source S11 de 241Am de type ESAL20 de 200 à 600Bq ± 20% n° : Activité en Bq :",
+   "rn": "Am-241",
+   "types": [
+    "S11"
+   ],
+   "page": 0,
+   "num": {
+    "x": 316.1,
+    "y": 286.5,
+    "w": 77.5
+   },
+   "act": {
+    "x": 454.1,
+    "y": 286.5
+   }
+  },
+  {
+   "id": "src3",
+   "label": "Source S14 de 90Sr de type ESAL20 de 2 à 8KBq ±20% n° : Activité en Bq :",
+   "rn": "Sr-90",
+   "types": [
+    "S14"
+   ],
+   "page": 0,
+   "num": {
+    "x": 294.8,
+    "y": 296.4,
+    "w": 98.9
+   },
+   "act": {
+    "x": 454.1,
+    "y": 296.4
+   }
+  }
+ ],
+ "personnes": [
+  {
+   "id": "exec",
+   "page": 0,
+   "nom": {
+    "x": 188.3,
+    "y": 342.5
+   },
+   "sig": {
+    "x": 335.0,
+    "y": 336.5
+   }
+  },
+  {
+   "id": "ct",
+   "page": 0,
+   "nom": {
+    "x": 188.9,
+    "y": 370.1
+   },
+   "sig": {
+    "x": 335.0,
+    "y": 364.1
+   }
+  }
+ ],
+ "rows": [
+  {
+   "kind": "titre",
+   "page": 0,
+   "label": "4.2 Contrôle général",
+   "bold": true
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 443.8,
+   "y1": 461.0,
+   "label": "Contrôle d’aspect",
+   "tol": "Conforme",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 333.2,
+      "y": 449.0,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 354.9,
+      "y": 449.0,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 418.3,
+      "y": 449.0,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 440.0,
+      "y": 449.0,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 443.8,
+    "y1": 461.0
+   }
+  },
+  {
+   "kind": "titre",
+   "page": 0,
+   "label": "4.3 Contrôle fonctionnel",
+   "bold": true
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 475.6,
+   "y1": 487.5,
+   "label": "Version du logiciel",
+   "tol": "V2.1X / V2.4X / V2.5X",
+   "avant": {
+    "type": "text",
+    "x": 314.0,
+    "w": 81.0,
+    "y0": 475.6,
+    "y1": 487.5
+   },
+   "apres": {
+    "type": "text",
+    "x": 399.0,
+    "w": 81.1,
+    "y0": 475.6,
+    "y1": 487.5
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 475.6,
+    "y1": 487.5
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 487.5,
+   "y1": 499.4,
+   "label": "Présence vis de butée + propreté réglette",
+   "tol": "Conforme",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 333.2,
+      "y": 490.0,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 354.9,
+      "y": 490.0,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 418.3,
+      "y": 490.0,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 440.0,
+      "y": 490.0,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 487.5,
+    "y1": 499.4
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 499.4,
+   "y1": 511.3,
+   "label": "Capteur de position droite et gauche",
+   "tol": "Conforme",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 333.2,
+      "y": 501.9,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 354.9,
+      "y": 501.9,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 418.3,
+      "y": 501.9,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 440.0,
+      "y": 501.9,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 499.4,
+    "y1": 511.3
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 511.3,
+   "y1": 524.9,
+   "label": "Si existante batterie",
+   "tol": "Conforme ou SO",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 321.6,
+      "y": 514.8,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 341.1,
+      "y": 514.8,
+      "s": 7.0
+     },
+     {
+      "v": "SO",
+      "x": 366.4,
+      "y": 514.8,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 406.8,
+      "y": 514.8,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 426.2,
+      "y": 514.8,
+      "s": 7.0
+     },
+     {
+      "v": "SO",
+      "x": 451.5,
+      "y": 514.8,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 511.3,
+    "y1": 524.9
+   }
+  },
+  {
+   "kind": "titre",
+   "page": 0,
+   "label": "4.4 Contrôle des paramètres",
+   "bold": true
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 536.8,
+   "y1": 548.6,
+   "label": "Impression",
+   "tol": "Sans",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "Oui",
+      "x": 328.2,
+      "y": 539.2,
+      "s": 7.0
+     },
+     {
+      "v": "Non",
+      "x": 356.6,
+      "y": 539.2,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "Oui",
+      "x": 413.4,
+      "y": 539.2,
+      "s": 7.0
+     },
+     {
+      "v": "Non",
+      "x": 441.7,
+      "y": 539.2,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 536.8,
+    "y1": 548.6
+   }
+  },
+  {
+   "kind": "titre",
+   "page": 0,
+   "label": " Mode de mesure",
+   "bold": false
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 560.5,
+   "y1": 572.3,
+   "label": "Mode",
+   "tol": "β + Aα",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 333.2,
+      "y": 563.0,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 354.9,
+      "y": 563.0,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 418.3,
+      "y": 563.0,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 440.0,
+      "y": 563.0,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 560.5,
+    "y1": 572.3
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 572.3,
+   "y1": 584.2,
+   "label": "Affichage",
+   "tol": "Unité",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 333.2,
+      "y": 574.9,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 354.9,
+      "y": 574.9,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 418.3,
+      "y": 574.9,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 440.0,
+      "y": 574.9,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 572.3,
+    "y1": 584.2
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 584.2,
+   "y1": 596.0,
+   "label": "Affichage public (pour v2.1)",
+   "tol": "Non ou SO",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 321.6,
+      "y": 586.6,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 341.1,
+      "y": 586.6,
+      "s": 7.0
+     },
+     {
+      "v": "SO",
+      "x": 366.4,
+      "y": 586.6,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 406.8,
+      "y": 586.6,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 426.2,
+      "y": 586.6,
+      "s": 7.0
+     },
+     {
+      "v": "SO",
+      "x": 451.5,
+      "y": 586.6,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 584.2,
+    "y1": 596.0
+   }
+  },
+  {
+   "kind": "titre",
+   "page": 0,
+   "label": " Paramétrage",
+   "bold": false
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 607.9,
+   "y1": 619.8,
+   "label": "Langue",
+   "tol": "Français",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 333.2,
+      "y": 610.4,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 354.9,
+      "y": 610.4,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 418.3,
+      "y": 610.4,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 440.0,
+      "y": 610.4,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 607.9,
+    "y1": 619.8
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 619.8,
+   "y1": 631.6,
+   "label": "Format de date",
+   "tol": "Conforme",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 333.2,
+      "y": 622.3,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 354.9,
+      "y": 622.3,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 418.3,
+      "y": 622.3,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 440.0,
+      "y": 622.3,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 619.8,
+    "y1": 631.6
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 631.6,
+   "y1": 643.4,
+   "label": "Date et heure",
+   "tol": "Conforme",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 333.2,
+      "y": 634.0,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 354.9,
+      "y": 634.0,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 418.3,
+      "y": 634.0,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 440.0,
+      "y": 634.0,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 631.6,
+    "y1": 643.4
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 643.4,
+   "y1": 655.3,
+   "label": "Contrôle des détecteur Mes et Comp (pour v2.1)",
+   "tol": "Oui ou SO",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 321.6,
+      "y": 645.9,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 341.1,
+      "y": 645.9,
+      "s": 7.0
+     },
+     {
+      "v": "SO",
+      "x": 366.4,
+      "y": 645.9,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 406.8,
+      "y": 645.9,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 426.2,
+      "y": 645.9,
+      "s": 7.0
+     },
+     {
+      "v": "SO",
+      "x": 451.5,
+      "y": 645.9,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 643.4,
+    "y1": 655.3
+   }
+  },
+  {
+   "kind": "titre",
+   "page": 0,
+   "label": " Frottis",
+   "bold": false
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 667.2,
+   "y1": 716.0,
+   "label": "Temps de Mesure : β :TpsActMin 10s α : TpsActMin 100s β :ActMin 0,2 α :ActMin 0,02 β :TpsActMax 30s α : TpsActMax 100s β :CptMax 1000 α :CptMax 1000",
+   "tol": "Conforme",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 333.2,
+      "y": 688.2,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 354.9,
+      "y": 688.2,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 418.3,
+      "y": 688.2,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 440.0,
+      "y": 688.2,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 667.2,
+    "y1": 716.0
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 716.0,
+   "y1": 765.0,
+   "label": "Limite de classe : β :classed<0,00 α : classed<0,00 β :public<0,40 α :public<0,04 β :transnuc<4,00 α : transnuc<0,40 β :contamine=4,00 α :contamine=0,40",
+   "tol": "Conforme",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 333.2,
+      "y": 737.1,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 354.9,
+      "y": 737.1,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 418.3,
+      "y": 737.1,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 440.0,
+      "y": 737.1,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 716.0,
+    "y1": 765.0
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 0,
+   "y0": 765.0,
+   "y1": 776.9,
+   "label": "Affichage public (pour v2.4/v2.5)",
+   "tol": "Non ou SO",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 321.6,
+      "y": 767.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 341.1,
+      "y": 767.5,
+      "s": 7.0
+     },
+     {
+      "v": "SO",
+      "x": 366.4,
+      "y": 767.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 406.8,
+      "y": 767.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 426.2,
+      "y": 767.5,
+      "s": 7.0
+     },
+     {
+      "v": "SO",
+      "x": 451.5,
+      "y": 767.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 765.0,
+    "y1": 776.9
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 98.1,
+   "y1": 144.6,
+   "label": "Choix de surface de prélèvement Surface 1 → 0,030m² « Valid.Surf.Prlv » oui Surface 2 → 0,010m² Surface 3 → 0,200m² Surface 4 → 0,000m²",
+   "tol": "Conforme",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 333.2,
+      "y": 118.0,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 354.9,
+      "y": 118.0,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 418.3,
+      "y": 118.0,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 440.0,
+      "y": 118.0,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 98.1,
+    "y1": 144.6
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 144.6,
+   "y1": 156.5,
+   "label": "Frottis",
+   "tol": "Oui",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 333.2,
+      "y": 147.1,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 354.9,
+      "y": 147.1,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 418.3,
+      "y": 147.1,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 440.0,
+      "y": 147.1,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 144.6,
+    "y1": 156.5
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 156.5,
+   "y1": 168.3,
+   "label": "Unité",
+   "tol": "Bq/cm²",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 333.2,
+      "y": 158.9,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 354.9,
+      "y": 158.9,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 418.3,
+      "y": 158.9,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 440.0,
+      "y": 158.9,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 156.5,
+    "y1": 168.3
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 168.3,
+   "y1": 180.1,
+   "label": "Rendement de frottis",
+   "tol": "10%",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 333.2,
+      "y": 170.8,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 354.9,
+      "y": 170.8,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 418.3,
+      "y": 170.8,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 440.0,
+      "y": 170.8,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 168.3,
+    "y1": 180.1
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 180.1,
+   "y1": 192.0,
+   "label": "Rendement source α",
+   "tol": "25%",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 321.6,
+      "y": 182.7,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 341.1,
+      "y": 182.7,
+      "s": 7.0
+     },
+     {
+      "v": "SO",
+      "x": 366.4,
+      "y": 182.7,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 406.8,
+      "y": 182.7,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 426.2,
+      "y": 182.7,
+      "s": 7.0
+     },
+     {
+      "v": "SO",
+      "x": 451.5,
+      "y": 182.7,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 180.1,
+    "y1": 192.0
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 192.0,
+   "y1": 203.9,
+   "label": "Rendement source β",
+   "tol": "50%",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 321.6,
+      "y": 194.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 341.1,
+      "y": 194.5,
+      "s": 7.0
+     },
+     {
+      "v": "SO",
+      "x": 366.4,
+      "y": 194.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 406.8,
+      "y": 194.5,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 426.2,
+      "y": 194.5,
+      "s": 7.0
+     },
+     {
+      "v": "SO",
+      "x": 451.5,
+      "y": 194.5,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 192.0,
+    "y1": 203.9
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 203.9,
+   "y1": 215.7,
+   "label": "Si rendement source commun pour α et β",
+   "tol": "50%",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 321.6,
+      "y": 206.3,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 341.1,
+      "y": 206.3,
+      "s": 7.0
+     },
+     {
+      "v": "SO",
+      "x": 366.4,
+      "y": 206.3,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 406.8,
+      "y": 206.3,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 426.2,
+      "y": 206.3,
+      "s": 7.0
+     },
+     {
+      "v": "SO",
+      "x": 451.5,
+      "y": 206.3,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 203.9,
+    "y1": 215.7
+   }
+  },
+  {
+   "kind": "titre",
+   "page": 1,
+   "label": " Détecteur",
+   "bold": false
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 227.5,
+   "y1": 247.3,
+   "label": "Contrôle des détecteur Mes et Comp (pour v2.4 /v2.5)",
+   "tol": "Oui ou SO",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 321.6,
+      "y": 234.0,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 341.1,
+      "y": 234.0,
+      "s": 7.0
+     },
+     {
+      "v": "SO",
+      "x": 366.4,
+      "y": 234.0,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 406.8,
+      "y": 234.0,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 426.2,
+      "y": 234.0,
+      "s": 7.0
+     },
+     {
+      "v": "SO",
+      "x": 451.5,
+      "y": 234.0,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 227.5,
+    "y1": 247.3
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 247.3,
+   "y1": 259.3,
+   "label": "Bruit de fond (pour v2.4/v2.5)",
+   "tol": "Dynamique ou SO",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 321.6,
+      "y": 250.0,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 341.1,
+      "y": 250.0,
+      "s": 7.0
+     },
+     {
+      "v": "SO",
+      "x": 366.4,
+      "y": 250.0,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 406.8,
+      "y": 250.0,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 426.2,
+      "y": 250.0,
+      "s": 7.0
+     },
+     {
+      "v": "SO",
+      "x": 451.5,
+      "y": 250.0,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 247.3,
+    "y1": 259.3
+   }
+  },
+  {
+   "kind": "titre",
+   "page": 1,
+   "label": "4.5 contrôle du Bdf",
+   "bold": true
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 271.2,
+   "y1": 285.9,
+   "label": "Comptage voie mesure : Cpt. Mes",
+   "tol": "10 ≤ ≤ 30 cps/60s",
+   "avant": {
+    "type": "text",
+    "x": 314.0,
+    "w": 81.0,
+    "y0": 271.2,
+    "y1": 285.9
+   },
+   "apres": {
+    "type": "text",
+    "x": 399.0,
+    "w": 81.1,
+    "y0": 271.2,
+    "y1": 285.9
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 271.2,
+    "y1": 285.9
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 285.9,
+   "y1": 300.6,
+   "label": "Comptage voie compensation : Cpt. Comp",
+   "tol": "10 ≤ ≤ 30 cps/60s",
+   "avant": {
+    "type": "text",
+    "x": 314.0,
+    "w": 81.0,
+    "y0": 285.9,
+    "y1": 300.6
+   },
+   "apres": {
+    "type": "text",
+    "x": 399.0,
+    "w": 81.1,
+    "y0": 285.9,
+    "y1": 300.6
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 285.9,
+    "y1": 300.6
+   }
+  },
+  {
+   "kind": "titre",
+   "page": 1,
+   "label": "4.6 Réglage coeff. de mesure / Bdf",
+   "bold": true
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 315.3,
+   "y1": 330.0,
+   "label": "Cpt. Mes / Cpt. Comp sur 300s",
+   "tol": "50 ≤ ≤ 200%",
+   "avant": {
+    "type": "text",
+    "x": 314.0,
+    "w": 81.0,
+    "y0": 315.3,
+    "y1": 330.0
+   },
+   "apres": {
+    "type": "text",
+    "x": 399.0,
+    "w": 81.1,
+    "y0": 315.3,
+    "y1": 330.0
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 315.3,
+    "y1": 330.0
+   }
+  },
+  {
+   "kind": "titre",
+   "page": 1,
+   "label": "4.7 Réglage seuil auto α",
+   "bold": true
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 344.7,
+   "y1": 359.4,
+   "label": "Seuil avec la source de 90Sr sur 30s",
+   "tol": "mV",
+   "avant": {
+    "type": "text",
+    "x": 314.0,
+    "w": 81.0,
+    "y0": 344.7,
+    "y1": 359.4
+   },
+   "apres": {
+    "type": "text",
+    "x": 399.0,
+    "w": 81.1,
+    "y0": 344.7,
+    "y1": 359.4
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 344.7,
+    "y1": 359.4
+   }
+  },
+  {
+   "kind": "titre",
+   "page": 1,
+   "label": "4.8 contrôle des Rendement",
+   "bold": true
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 374.1,
+   "y1": 388.8,
+   "label": "Rendement β au 60Co sur 2π sur 60s",
+   "tol": "26 ≤ ≤ 34%",
+   "avant": {
+    "type": "text",
+    "x": 314.0,
+    "w": 81.0,
+    "y0": 374.1,
+    "y1": 388.8
+   },
+   "apres": null,
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 374.1,
+    "y1": 388.8
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 388.8,
+   "y1": 403.5,
+   "label": "Rendement α à 241Am sur 2π sur 60s",
+   "tol": "24 ≤ ≤ 32%",
+   "avant": {
+    "type": "text",
+    "x": 314.0,
+    "w": 81.0,
+    "y0": 388.8,
+    "y1": 403.5
+   },
+   "apres": null,
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 388.8,
+    "y1": 403.5
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 403.5,
+   "y1": 423.6,
+   "label": "Si rendement source commun pour α et β Rendement α à 241Am sur 2π sur 60s",
+   "tol": "12 ≤ ≤ 16%",
+   "avant": {
+    "type": "textso",
+    "so": {
+     "v": "SO",
+     "x": 369.7,
+     "y": 410.3,
+     "s": 7.0
+    },
+    "x": 314.0,
+    "w": 51.7,
+    "y0": 403.5,
+    "y1": 423.6
+   },
+   "apres": null,
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 403.5,
+    "y1": 423.6
+   }
+  },
+  {
+   "kind": "titre",
+   "page": 1,
+   "label": "4.9 Calibration si nécessaire (rendement non",
+   "bold": true,
+   "choice": [
+    {
+     "v": "SO",
+     "x": 271.0,
+     "y": 427.7,
+     "s": 7.0
+    }
+   ]
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 438.3,
+   "y1": 453.0,
+   "label": "Point de fonctionnement β",
+   "tol": "V",
+   "avant": {
+    "type": "textso",
+    "so": {
+     "v": "SO",
+     "x": 369.7,
+     "y": 442.4,
+     "s": 7.0
+    },
+    "x": 314.0,
+    "w": 51.7,
+    "y0": 438.3,
+    "y1": 453.0
+   },
+   "apres": null,
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 438.3,
+    "y1": 453.0
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 453.0,
+   "y1": 467.7,
+   "label": "Plateau Rendement",
+   "tol": "26 ≤ ≤ 34%",
+   "avant": {
+    "type": "textso",
+    "so": {
+     "v": "SO",
+     "x": 369.7,
+     "y": 457.1,
+     "s": 7.0
+    },
+    "x": 314.0,
+    "w": 51.7,
+    "y0": 453.0,
+    "y1": 467.7
+   },
+   "apres": null,
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 453.0,
+    "y1": 467.7
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 467.7,
+   "y1": 482.5,
+   "label": "Point de fonctionnement",
+   "tol": "V",
+   "avant": {
+    "type": "textso",
+    "so": {
+     "v": "SO",
+     "x": 369.7,
+     "y": 471.8,
+     "s": 7.0
+    },
+    "x": 314.0,
+    "w": 51.7,
+    "y0": 467.7,
+    "y1": 482.5
+   },
+   "apres": null,
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 467.7,
+    "y1": 482.5
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 482.5,
+   "y1": 497.1,
+   "label": "Plateau α Rendement",
+   "tol": "24 ≤ ≤ 32%",
+   "avant": {
+    "type": "textso",
+    "so": {
+     "v": "SO",
+     "x": 369.7,
+     "y": 486.5,
+     "s": 7.0
+    },
+    "x": 314.0,
+    "w": 51.7,
+    "y0": 482.5,
+    "y1": 497.1
+   },
+   "apres": null,
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 482.5,
+    "y1": 497.1
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 497.1,
+   "y1": 511.9,
+   "label": "Si rendement source commun α et β",
+   "tol": "12 ≤ ≤ 16%",
+   "avant": {
+    "type": "textso",
+    "so": {
+     "v": "SO",
+     "x": 369.7,
+     "y": 501.2,
+     "s": 7.0
+    },
+    "x": 314.0,
+    "w": 51.7,
+    "y0": 497.1,
+    "y1": 511.9
+   },
+   "apres": null,
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 497.1,
+    "y1": 511.9
+   }
+  },
+  {
+   "kind": "titre",
+   "page": 1,
+   "label": "4.10 contrôle de la réponse avec source",
+   "bold": true
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 526.5,
+   "y1": 541.3,
+   "label": "Contamination β au 60Co sur 4 π (Bq/cm2)",
+   "tol": "Asβ à ± 20%",
+   "avant": {
+    "type": "text",
+    "x": 314.0,
+    "w": 81.0,
+    "y0": 526.5,
+    "y1": 541.3
+   },
+   "apres": {
+    "type": "text",
+    "x": 399.0,
+    "w": 81.1,
+    "y0": 526.5,
+    "y1": 541.3
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 526.5,
+    "y1": 541.3
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 541.3,
+   "y1": 555.9,
+   "label": "Contamination α à 241Am sur 4 π (Bq/cm2)",
+   "tol": "Asα à ± 20%",
+   "avant": {
+    "type": "text",
+    "x": 314.0,
+    "w": 81.0,
+    "y0": 541.3,
+    "y1": 555.9
+   },
+   "apres": {
+    "type": "text",
+    "x": 399.0,
+    "w": 81.1,
+    "y0": 541.3,
+    "y1": 555.9
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 541.3,
+    "y1": 555.9
+   }
+  },
+  {
+   "kind": "titre",
+   "page": 1,
+   "label": "4.11 contrôle de la réponse avec frottis propre",
+   "bold": true
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 570.7,
+   "y1": 585.3,
+   "label": "Moyenne de 10 mesures",
+   "tol": "0 ≤ ≤ 0,05 Bq/cm²",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 333.2,
+      "y": 574.6,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 354.9,
+      "y": 574.6,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 418.3,
+      "y": 574.6,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 440.0,
+      "y": 574.6,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 570.7,
+    "y1": 585.3
+   }
+  },
+  {
+   "kind": "titre",
+   "page": 1,
+   "label": "5.0 contrôle technique renforcé",
+   "bold": true
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 600.1,
+   "y1": 628.6,
+   "label": "5.1 Vérification des paramètres du § 4.4 sur ticket d’impression (Nom, Visa, Date) à apposer sur le ticket",
+   "tol": "Conforme",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 321.6,
+      "y": 610.9,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 341.1,
+      "y": 610.9,
+      "s": 7.0
+     },
+     {
+      "v": "SO",
+      "x": 366.4,
+      "y": 610.9,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 406.8,
+      "y": 610.9,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 426.2,
+      "y": 610.9,
+      "s": 7.0
+     },
+     {
+      "v": "SO",
+      "x": 451.5,
+      "y": 610.9,
+      "s": 7.0
+     }
+    ]
+   },
+   "obs": {
+    "type": "text",
+    "x": 484.1,
+    "w": 88.0,
+    "y0": 600.1,
+    "y1": 628.6
+   }
+  },
+  {
+   "kind": "mesure",
+   "page": 1,
+   "y0": 628.6,
+   "y1": 675.2,
+   "label": "5.2 Si ticket d’impression absent, vérification des paramètres du § 4.4 avec l’appareil",
+   "tol": "Conforme",
+   "avant": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 321.6,
+      "y": 648.4,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 341.1,
+      "y": 648.4,
+      "s": 7.0
+     },
+     {
+      "v": "SO",
+      "x": 366.4,
+      "y": 648.4,
+      "s": 7.0
+     }
+    ]
+   },
+   "apres": {
+    "type": "choice",
+    "options": [
+     {
+      "v": "C",
+      "x": 406.8,
+      "y": 648.4,
+      "s": 7.0
+     },
+     {
+      "v": "NC",
+      "x": 426.2,
+      "y": 648.4,
+      "s": 7.0
+     },
+     {
+      "v": "SO",
+      "x": 451.5,
+      "y": 648.4,
+      "s": 7.0
+     }
+    ]
+   },
+   "obsFields": [
+    {
+     "id": "nom",
+     "x": 512.0,
+     "y": 629.2
+    },
+    {
+     "id": "visa",
+     "x": 510.7,
+     "y": 647.5
+    },
+    {
+     "id": "date",
+     "x": 512.0,
+     "y": 665.9
+    }
+   ]
+  }
+ ],
+ "comments": {
+  "page": 1,
+  "x": 38.6,
+  "y": 704.1,
+  "w": 500,
+  "h": 79.1,
+  "size": 9
+ },
+ "everyPage": [
+  {
+   "id": "numero",
+   "page": 0,
+   "x": 475.5,
+   "y": 56.1,
+   "size": 8,
+   "align": "left"
+  },
+  {
+   "id": "numero",
+   "page": 1,
+   "x": 475.5,
+   "y": 56.1,
+   "size": 8,
+   "align": "left"
+  }
+ ]
+}
