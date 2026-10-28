@@ -134,3 +134,27 @@ export function blankLigne(listingId: string, ordre: number, triExec: string | n
     updated_at: new Date().toISOString(), deleted: false,
   };
 }
+
+// --- noms des PDF exportés --------------------------------------------------
+// "<désignation>_<id court>_<aammjj>_<suffixe>.pdf"
+//   suffixe : CT (documents CT), VP (constat), VP_COR (constat d'un contrôle correctif).
+export type SuffixeExport = "CT" | "VP" | "VP_COR";
+export function suffixeConstat(l: Pick<InterventionLigne, "type_controle">): SuffixeExport {
+  return l.type_controle === "Correctif" ? "VP_COR" : "VP";
+}
+const part = (s: string | null | undefined) =>
+  (s ?? "").trim().replace(/[^\p{L}\p{N}.-]+/gu, "_").replace(/^_+|_+$/g, "");
+export function nomExport(
+  l: Pick<InterventionLigne, "designation" | "id_court" | "scan">, date: Date, suffixe: SuffixeExport,
+): string {
+  const aammjj = String(date.getFullYear() % 100).padStart(2, "0")
+    + String(date.getMonth() + 1).padStart(2, "0") + String(date.getDate()).padStart(2, "0");
+  const nom = part(l.designation) || "equipement";
+  const idc = part(l.id_court) || part(l.scan) || "sans-id";
+  return `${nom}_${idc}_${aammjj}_${suffixe}.pdf`;
+}
+// 'YYYY-MM-DD' -> Date locale (midi, pour éviter tout décalage de fuseau)
+export function dateOfIso(iso: string | null | undefined): Date {
+  const [y, m, d] = (iso ?? "").split("-").map(Number);
+  return y && m && d ? new Date(y, m - 1, d, 12) : new Date();
+}

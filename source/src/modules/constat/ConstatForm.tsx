@@ -5,7 +5,7 @@ import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom"
 import { db, metaGet, metaSet } from "../../lib/db";
 import { SignaturePad } from "../../components/SignaturePad";
 import { LignePhotos } from "../../components/LignePhotos";
-import { saveLigne } from "../../lib/interventions";
+import { dateOfIso, nomExport, saveLigne, suffixeConstat } from "../../lib/interventions";
 import { getParams } from "../../lib/planning";
 import {
   CONSTAT_MODELES, MA_SIGNATURE, numeroConstat, constatOfLigne, deleteConstat, fmtBq, modeleById, modeleForLigne, parseFrDate,
@@ -148,12 +148,19 @@ export function ConstatForm() {
     if (pending.current) { await saveConstat(pending.current); pending.current = null; }
     setBusy(true); setMsg("");
     try {
-      const { buildConstatPdf } = await import("../../lib/constatPdf");
-      const { saveBlob } = await import("../../lib/xlsx");
-      const blob = await buildConstatPdf(c, import.meta.env.BASE_URL, c.values.annexePhotos !== false ? (ligne?.photos ?? []) : []);
-      const d = (parseFrDate(dateVerif) ?? new Date()).toISOString().slice(0, 10);
-      const idc = (sv("id_client") || ligne?.id_court || "equipement").replace(/[^\p{L}\p{N}_-]+/gu, "_");
-      await saveBlob(blob, `Constat_${c.template_id}_${idc}_${d}.pdf`);
+      const { buildConstatPdf, buildCtPdf } = await import("../../lib/constatPdf");
+      const { saveBlobs } = await import("../../lib/xlsx");
+      const base = import.meta.env.BASE_URL;
+      const d = parseFrDate(dateVerif) ?? dateOfIso(ligne?.date_op);
+      const eq = { designation: ligne?.designation ?? null, id_court: ligne?.id_court || sv("id_client"), scan: ligne?.scan ?? "" };
+      const files = [{ blob: await buildConstatPdf(c, base), name: nomExport(eq, d, ligne ? suffixeConstat(ligne) : "VP") }];
+      // documents CT : PDF séparé (sans le constat)
+      const docs = ligne?.photos ?? [];
+      if (docs.length && c.values.annexePhotos !== false) {
+        const ref = [eq.designation, eq.id_court].filter(Boolean).join(" · ");
+        files.push({ blob: await buildCtPdf(docs, base, ref), name: nomExport(eq, d, "CT") });
+      }
+      await saveBlobs(files);
     } catch (e) {
       setMsg("Export impossible : " + (e instanceof Error ? e.message : String(e)));
     } finally { setBusy(false); }
@@ -357,7 +364,7 @@ export function ConstatForm() {
         {(ligne.photos?.length ?? 0) > 0 && (
           <label className="field-check">
             <input type="checkbox" checked={v.annexePhotos !== false} onChange={(e) => setVals({ annexePhotos: e.target.checked })} />
-            <span>Joindre les documents en annexe du PDF</span>
+            <span>Exporter aussi les documents CT (PDF séparé « _CT »)</span>
           </label>
         )}
       </div>

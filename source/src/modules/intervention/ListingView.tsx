@@ -27,6 +27,7 @@ import { getParams } from "../../lib/planning";
 import { CONSTAT_MODELES, constatsOfListing, modeleForLigne } from "../../lib/constats";
 import {
   blankLigne, deleteLigne, deriveEcheance, getListing, linesOf, lookupEquipement, saveLigne, validiteForOperation,
+  dateOfIso, nomExport,
 } from "../../lib/interventions";
 import {
   CONFORMITE_AVEC_ECHEANCE, INTERV_CONFORMITES, INTERV_OPERATIONS, INTERV_TYPES_CONTROLE,
@@ -219,6 +220,24 @@ export function ListingView() {
     }
   }
 
+  // documents CT d'une ligne combinés en un seul PDF (sans le constat)
+  const [ctBusy, setCtBusy] = useState(false);
+  async function exportCt(l: InterventionLigne) {
+    if (ctBusy || !l.photos?.length) return;
+    setCtBusy(true);
+    try {
+      const { buildCtPdf } = await import("../../lib/constatPdf");
+      const { saveBlob } = await import("../../lib/xlsx");
+      const ref = [l.designation, l.id_court || l.scan].filter(Boolean).join(" · ");
+      const blob = await buildCtPdf(l.photos, import.meta.env.BASE_URL, ref);
+      await saveBlob(blob, nomExport(l, dateOfIso(l.date_op), "CT"));
+    } catch (e) {
+      alert("Export des documents CT impossible : " + (e instanceof Error ? e.message : String(e)));
+    } finally {
+      setCtBusy(false);
+    }
+  }
+
   async function removeLigne(lid: string) {
     if (!confirm("Supprimer cette ligne ?")) return;
     if (expandedId === lid) { setExpandedId(null); setDraft(null); }
@@ -374,6 +393,11 @@ export function ListingView() {
 
                 <div className="field"><span>Documents CT (photos, PDF, HTML, texte){d.photos?.length ? ` · ${d.photos.length}` : ""}</span>
                   <LignePhotos photos={d.photos ?? []} onChange={(p) => update({ photos: p })} />
+                  {(d.photos?.length ?? 0) > 0 && (
+                    <button type="button" className="btn btn-mini" onClick={() => exportCt(d)} disabled={ctBusy} title="Combiner les documents en un seul PDF (sans le constat)">
+                      {ctBusy ? "Génération…" : "⬇ Exporter les documents CT (PDF)"}
+                    </button>
+                  )}
                 </div>
                 <div className="field"><span>Étiquette</span><ApercuEtiquette l={d} /></div>
                 <button type="button" className="btn btn-danger" onClick={() => removeLigne(d.id)}>Supprimer la ligne</button>

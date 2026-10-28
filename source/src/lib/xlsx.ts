@@ -374,3 +374,27 @@ export async function saveBlob(blob: Blob, filename: string): Promise<void> {
   a.remove();
   setTimeout(() => URL.revokeObjectURL(url), 4000);
 }
+
+// Enregistre plusieurs fichiers d'un coup : un seul partage (mobile) si possible,
+// sinon un téléchargement par fichier.
+export async function saveBlobs(files: { blob: Blob; name: string }[]): Promise<void> {
+  if (files.length === 1) return saveBlob(files[0].blob, files[0].name);
+  const navAny = navigator as any;
+  try {
+    const list = files.map((f) => new File([f.blob], f.name, { type: f.blob.type }));
+    if (navAny.canShare && navAny.canShare({ files: list })) {
+      await navAny.share({ files: list, title: files.map((f) => f.name).join(", ") });
+      return;
+    }
+  } catch {
+    /* partage annulé / indisponible -> on télécharge */
+  }
+  for (const f of files) {
+    const url = URL.createObjectURL(f.blob);
+    const a = document.createElement("a");
+    a.href = url; a.download = f.name;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 4000);
+    await new Promise((r) => setTimeout(r, 400)); // certains navigateurs bloquent les téléchargements simultanés
+  }
+}

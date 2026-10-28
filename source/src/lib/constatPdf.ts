@@ -21,7 +21,7 @@ function safe(font: PDFFont, s: string): string {
   return out;
 }
 
-export async function buildConstatPdf(c: Constat, baseUrl: string, photos: LignePhoto[] = []): Promise<Blob> {
+export async function buildConstatPdf(c: Constat, baseUrl: string): Promise<Blob> {
   const modele = modeleById(c.template_id);
   if (!modele) throw new Error(`Modèle de constat inconnu : ${c.template_id}`);
   const t = modele.tpl;
@@ -138,84 +138,94 @@ export async function buildConstatPdf(c: Constat, baseUrl: string, photos: Ligne
     lines.slice(0, Math.floor(cm.h / lh)).forEach((ln, j) =>
       p.drawText(ln, { x: cm.x + 4, y: H(p) - cm.y - size - j * lh, size, font, color: INK }));
   }
-  // annexe des documents CT : photos (2 par page), PDF joints (pages recopiées telles quelles),
-  // HTML / texte (contenu texte mis en page). En-tête : n° de constat + id court.
-  if (photos.length) {
-    const A4: [number, number] = [595.28, 841.89];
-    const ref = [str("numero"), str("id_client"), c.template_id].filter(Boolean).join(" · ");
-    const head = (p: PDFPage, titre: string) => {
-      p.drawText(safe(font, `${titre} — ${ref}`), { x: 40, y: A4[1] - 50, size: 12, font, color: rgb(0, 0, 0) });
-    };
-    const kind = (d: { data: string; mime?: string; name?: string }) => {
-      const m = (d.mime || d.data.slice(5, d.data.indexOf(";"))).toLowerCase(), n = (d.name || "").toLowerCase();
-      return m.startsWith("image/") ? "image" : m === "application/pdf" || n.endsWith(".pdf") ? "pdf"
-        : m === "text/html" || /\.html?$/.test(n) ? "html" : m.startsWith("text/") ? "texte" : "autre";
-    };
-    const bytesOf = (d: string) => { const b = atob(d.split(",")[1] ?? ""); const u = new Uint8Array(b.length); for (let i = 0; i < b.length; i++) u[i] = b.charCodeAt(i); return u; };
-    const caption = (ph: LignePhoto) => [ph.name, new Date(ph.ts).toLocaleString("fr-FR"), ph.note].filter(Boolean).join(" — ");
+  pdf.setTitle(`Constat de vérification ${c.template_id} ${str("id_client")}`.trim());
+  const out = await pdf.save();
+  return new Blob([out as BlobPart], { type: "application/pdf" });
+}
 
-    const images = photos.filter((p) => kind(p) === "image");
-    for (let i = 0; i < images.length; i += 2) {
-      const p = pdf.addPage(A4);
-      head(p, "Annexe photos");
-      for (let j = 0; j < 2 && i + j < images.length; j++) {
-        const ph = images[i + j];
-        let img;
-        try { img = ph.data.startsWith("data:image/png") ? await pdf.embedPng(ph.data) : await pdf.embedJpg(ph.data); } catch { continue; }
-        const boxW = A4[0] - 80, boxH = 330, top = A4[1] - 75 - j * 375;
-        const k = Math.min(boxW / img.width, boxH / img.height);
-        const w = img.width * k, h = img.height * k;
-        p.drawImage(img, { x: 40 + (boxW - w) / 2, y: top - h, width: w, height: h });
-        p.drawText(safe(font, [new Date(ph.ts).toLocaleString("fr-FR"), ph.note].filter(Boolean).join(" — ")), { x: 40, y: top - boxH - 14, size: 9, font, color: rgb(0.2, 0.2, 0.2) });
-      }
-    }
-    const nonInclus: string[] = [];
-    for (const ph of photos) {
-      const k = kind(ph);
-      if (k === "pdf") {
-        try {
-          const src = await PDFDocument.load(bytesOf(ph.data), { ignoreEncryption: true });
-          const sep = pdf.addPage(A4); head(sep, "Annexe document");
-          sep.drawText(safe(font, caption(ph)), { x: 40, y: A4[1] - 75, size: 10, font, color: rgb(0.2, 0.2, 0.2) });
-          const pages = await pdf.copyPages(src, src.getPageIndices());
-          pages.forEach((pg) => pdf.addPage(pg));
-        } catch { nonInclus.push(`${ph.name || "PDF"} (illisible)`); }
-      } else if (k === "html" || k === "texte") {
-        let txt = new TextDecoder().decode(bytesOf(ph.data));
-        if (k === "html") {
-          if (typeof DOMParser !== "undefined") {
-            const doc = new DOMParser().parseFromString(txt, "text/html");
-            doc.querySelectorAll("script,style").forEach((n) => n.remove());
-            doc.querySelectorAll("td,th").forEach((n) => n.append("   "));
-            doc.querySelectorAll("br,p,div,tr,li,h1,h2,h3,h4,table").forEach((n) => n.append("\n"));
-            txt = doc.body?.textContent ?? "";
-          } else txt = txt.replace(/<(script|style)[\s\S]*?<\/\1>/gi, "").replace(/<\/(td|th)>/gi, "   ").replace(/<br\s*\/?>|<\/(p|div|tr|li|h\d)>/gi, "\n").replace(/<[^>]+>/g, "");
-          txt = txt.replace(/[ \t]+/g, " ").replace(/\n\s*\n\s*\n+/g, "\n\n").trim();
-        }
-        const size = 9, lh = 11.5, maxW = A4[0] - 80;
-        const lines: string[] = [];
-        for (const para of txt.split(/\r?\n/)) {
-          let cur = "";
-          for (const w of safe(font, para).split(" ")) {
-            const t = cur ? cur + " " + w : w;
-            if (font.widthOfTextAtSize(t, size) > maxW && cur) { lines.push(cur); cur = w; } else cur = t;
-          }
-          lines.push(cur);
-        }
-        const perPage = Math.floor((A4[1] - 110) / lh);
-        for (let i = 0; i < Math.max(1, lines.length); i += perPage) {
-          const p = pdf.addPage(A4); head(p, "Annexe document");
-          p.drawText(safe(font, caption(ph)), { x: 40, y: A4[1] - 68, size: 9, font, color: rgb(0.35, 0.35, 0.35) });
-          lines.slice(i, i + perPage).forEach((ln, j) => p.drawText(ln, { x: 40, y: A4[1] - 90 - j * lh, size, font, color: rgb(0, 0, 0) }));
-        }
-      } else if (k === "autre") nonInclus.push(ph.name || "document");
-    }
-    if (nonInclus.length) {
-      const p = pdf.addPage(A4); head(p, "Annexe");
-      p.drawText(safe(font, "Documents joints non intégrés : " + nonInclus.join(", ")), { x: 40, y: A4[1] - 80, size: 9, font, color: rgb(0, 0, 0) });
+// PDF des documents CT d'une ligne (sans le constat) : photos (2 par page), PDF joints
+// (pages recopiées telles quelles), HTML / texte (contenu texte mis en page).
+// `ref` = référence affichée en en-tête de chaque page (ex. désignation · id court).
+export async function buildCtPdf(photos: LignePhoto[], baseUrl: string, ref: string): Promise<Blob> {
+  if (!photos.length) throw new Error("Aucun document CT sur cette ligne.");
+  const pdf = await PDFDocument.create();
+  pdf.registerFontkit(fontkit);
+  const fontBytes = await (await fetch(baseUrl + "constats/LiberationSans.ttf")).arrayBuffer();
+  const font = await pdf.embedFont(fontBytes, { subset: true });
+  charset = null;
+  const A4: [number, number] = [595.28, 841.89];
+  const head = (p: PDFPage, titre: string) => {
+    p.drawText(safe(font, `${titre} — ${ref}`), { x: 40, y: A4[1] - 50, size: 12, font, color: rgb(0, 0, 0) });
+  };
+  const kind = (d: { data: string; mime?: string; name?: string }) => {
+    const m = (d.mime || d.data.slice(5, d.data.indexOf(";"))).toLowerCase(), n = (d.name || "").toLowerCase();
+    return m.startsWith("image/") ? "image" : m === "application/pdf" || n.endsWith(".pdf") ? "pdf"
+      : m === "text/html" || /\.html?$/.test(n) ? "html" : m.startsWith("text/") ? "texte" : "autre";
+  };
+  const bytesOf = (d: string) => { const b = atob(d.split(",")[1] ?? ""); const u = new Uint8Array(b.length); for (let i = 0; i < b.length; i++) u[i] = b.charCodeAt(i); return u; };
+  const caption = (ph: LignePhoto) => [ph.name, new Date(ph.ts).toLocaleString("fr-FR"), ph.note].filter(Boolean).join(" — ");
+
+  const images = photos.filter((p) => kind(p) === "image");
+  for (let i = 0; i < images.length; i += 2) {
+    const p = pdf.addPage(A4);
+    head(p, "Documents CT · photos");
+    for (let j = 0; j < 2 && i + j < images.length; j++) {
+      const ph = images[i + j];
+      let img;
+      try { img = ph.data.startsWith("data:image/png") ? await pdf.embedPng(ph.data) : await pdf.embedJpg(ph.data); } catch { continue; }
+      const boxW = A4[0] - 80, boxH = 330, top = A4[1] - 75 - j * 375;
+      const k = Math.min(boxW / img.width, boxH / img.height);
+      const w = img.width * k, h = img.height * k;
+      p.drawImage(img, { x: 40 + (boxW - w) / 2, y: top - h, width: w, height: h });
+      p.drawText(safe(font, [new Date(ph.ts).toLocaleString("fr-FR"), ph.note].filter(Boolean).join(" — ")), { x: 40, y: top - boxH - 14, size: 9, font, color: rgb(0.2, 0.2, 0.2) });
     }
   }
-  pdf.setTitle(`Constat de vérification ${c.template_id} ${str("id_client")}`.trim());
+  const nonInclus: string[] = [];
+  for (const ph of photos) {
+    const k = kind(ph);
+    if (k === "pdf") {
+      try {
+        const src = await PDFDocument.load(bytesOf(ph.data), { ignoreEncryption: true });
+        const sep = pdf.addPage(A4); head(sep, "Documents CT");
+        sep.drawText(safe(font, caption(ph)), { x: 40, y: A4[1] - 75, size: 10, font, color: rgb(0.2, 0.2, 0.2) });
+        const pages = await pdf.copyPages(src, src.getPageIndices());
+        pages.forEach((pg) => pdf.addPage(pg));
+      } catch { nonInclus.push(`${ph.name || "PDF"} (illisible)`); }
+    } else if (k === "html" || k === "texte") {
+      let txt = new TextDecoder().decode(bytesOf(ph.data));
+      if (k === "html") {
+        if (typeof DOMParser !== "undefined") {
+          const doc = new DOMParser().parseFromString(txt, "text/html");
+          doc.querySelectorAll("script,style").forEach((n) => n.remove());
+          doc.querySelectorAll("td,th").forEach((n) => n.append("   "));
+          doc.querySelectorAll("br,p,div,tr,li,h1,h2,h3,h4,table").forEach((n) => n.append("\n"));
+          txt = doc.body?.textContent ?? "";
+        } else txt = txt.replace(/<(script|style)[\s\S]*?<\/\1>/gi, "").replace(/<\/(td|th)>/gi, "   ").replace(/<br\s*\/?>|<\/(p|div|tr|li|h\d)>/gi, "\n").replace(/<[^>]+>/g, "");
+        txt = txt.replace(/[ \t]+/g, " ").replace(/\n\s*\n\s*\n+/g, "\n\n").trim();
+      }
+      const size = 9, lh = 11.5, maxW = A4[0] - 80;
+      const lines: string[] = [];
+      for (const para of txt.split(/\r?\n/)) {
+        let cur = "";
+        for (const w of safe(font, para).split(" ")) {
+          const t = cur ? cur + " " + w : w;
+          if (font.widthOfTextAtSize(t, size) > maxW && cur) { lines.push(cur); cur = w; } else cur = t;
+        }
+        lines.push(cur);
+      }
+      const perPage = Math.floor((A4[1] - 110) / lh);
+      for (let i = 0; i < Math.max(1, lines.length); i += perPage) {
+        const p = pdf.addPage(A4); head(p, "Documents CT");
+        p.drawText(safe(font, caption(ph)), { x: 40, y: A4[1] - 68, size: 9, font, color: rgb(0.35, 0.35, 0.35) });
+        lines.slice(i, i + perPage).forEach((ln, j) => p.drawText(ln, { x: 40, y: A4[1] - 90 - j * lh, size, font, color: rgb(0, 0, 0) }));
+      }
+    } else if (k === "autre") nonInclus.push(ph.name || "document");
+  }
+  if (nonInclus.length) {
+    const p = pdf.addPage(A4); head(p, "Documents CT");
+    p.drawText(safe(font, "Documents joints non intégrés : " + nonInclus.join(", ")), { x: 40, y: A4[1] - 80, size: 9, font, color: rgb(0, 0, 0) });
+  }
+  pdf.setTitle(`Documents CT ${ref}`.trim());
   const out = await pdf.save();
   return new Blob([out as BlobPart], { type: "application/pdf" });
 }
